@@ -66,7 +66,7 @@ export default function Home() {
                 target="_blank"
                 className="block hover:text-slate-200 text-slate-400"
               >
-                <span className="sr-only">LinkedIn</span>
+                <span className="sr-only">Linkedin</span>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 24 24"
@@ -146,8 +146,8 @@ export default function Home() {
             id="about"
             className="mb-16 scroll-mt-16 md:mb-24 lg:mb-36 lg:scroll-mt-24 "
           >
-            <div className=" sticky top-0 z-20 bg-slate-900/75 backdrop-blur md:mx-12 md:px-12 lg:sr-only lg:relative lg:top-auto">
-              <h2 className="text-xl text-slate-300">About</h2>
+            <div className="sticky top-0 z-20 bg-slate-900/75 backdrop-blur">
+              <h2 className="text-2xl text-slate-300">About</h2>
             </div>
 
             <div>
@@ -172,20 +172,21 @@ export default function Home() {
                 through my side projects.
               </p>
               <p className="mb-4 mt-2 px-1 py-3 text-slate-200">
-                Connect: marufkhan2002@gmail.com | +91 8171244560
+                Connect: +91 8171244560 | marufkhan2002@gmail.com
               </p>
             </div>
           </section>
+
           {/* Experience */}
           <section
             id="experience"
-            className="mb-16 scroll-mt-16 md:mb-24 lg:mb-36 lg:scroll-mt-24 "
+            className="mb-16 scroll-mt-16 md:mb-24 lg:mb-36 lg:scroll-mt-24"
           >
-            <div className=" sticky top-0 z-20 bg-slate-900/75 backdrop-blur md:mx-12 md:px-12 lg:sr-only lg:relative lg:top-auto">
-              <h2 className="text-xl text-slate-300">Experience</h2>
+             <div className="sticky top-0 z-20 bg-slate-900/75 backdrop-blur">
+              <h2 className="text-2xl text-slate-300">Experience</h2>
             </div>
+
             <div className="pt-8 px-4 experience_company  cursor-pointer ">
-              <p className="text-slate-300 text-sm py-2">Feb 2024 - Aug 2024</p>
               <p className="text- text-slate-200 font-bold py-1">
                 Frontend Engineer,{" "}
                 <a href="#" target="_blank">
@@ -206,6 +207,7 @@ export default function Home() {
                     </svg>
                   </span>{" "}
                 </a>
+                <p className="text-slate-300 text-sm py-2">Feb 2024 - Aug 2024</p>
               </p>
               <p className="text-slate-300 py-2 ">
                 Developed highly responsive, user-centric interfaces using
@@ -230,8 +232,7 @@ export default function Home() {
               </p>
 
               <ul className="flex skills flex-wrap mt-2">
-                
-              <li className="mt-2 mr-1.5">
+                <li className="mt-2 mr-1.5">
                   <div className="text-teal-300 rounded-full leading-5 flex items-center bg-teal-400/10 px-3 py-1 font-medium text-xs">
                     JavaScript
                   </div>
@@ -281,8 +282,8 @@ export default function Home() {
             id="projects"
             className="mb-16 scroll-mt-16 md:mb-24 lg:mb-36 lg:scroll-mt-24 "
           >
-            <div className=" sticky top-0 z-20 bg-slate-900/75 backdrop-blur md:mx-12 md:px-12 lg:sr-only lg:relative lg:top-auto">
-              <h2 className="text-xl text-slate-300">Projects</h2>
+             <div className="sticky top-0 z-20 bg-slate-900/75 backdrop-blur">
+              <h2 className="text-2xl text-slate-300">Projects</h2>
             </div>
 
             <div className="pt-8 px-4 project_card">
