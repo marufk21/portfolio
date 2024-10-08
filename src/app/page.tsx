@@ -172,7 +172,7 @@ export default function Home() {
                 through my side projects.
               </p>
               <p className="mb-4 mt-2 px-1 py-3 text-slate-200">
-                Mobile: +91 8171244560 | Connect: marufkhan2002@gmail.com
+                Connect: marufkhan2002@gmail.com | +91 8171244560
               </p>
             </div>
           </section>
@@ -230,6 +230,13 @@ export default function Home() {
               </p>
 
               <ul className="flex skills flex-wrap mt-2">
+                
+              <li className="mt-2 mr-1.5">
+                  <div className="text-teal-300 rounded-full leading-5 flex items-center bg-teal-400/10 px-3 py-1 font-medium text-xs">
+                    JavaScript
+                  </div>
+                </li>
+
                 <li className="mt-2 mr-1.5">
                   <div className="text-teal-300 rounded-full leading-5 flex items-center bg-teal-400/10 px-3 py-1 font-medium text-xs">
                     ReactJs
@@ -245,12 +252,6 @@ export default function Home() {
                 <li className="mt-2 mr-1.5">
                   <div className="text-teal-300 rounded-full leading-5 flex items-center bg-teal-400/10 px-3 py-1 font-medium text-xs">
                     Tailwind CSS
-                  </div>
-                </li>
-
-                <li className="mt-2 mr-1.5">
-                  <div className="text-teal-300 rounded-full leading-5 flex items-center bg-teal-400/10 px-3 py-1 font-medium text-xs">
-                    JavaScript
                   </div>
                 </li>
 
