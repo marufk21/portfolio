@@ -152,17 +152,27 @@ export default function Home() {
 
             <div>
               <p className="mb-4 mt-2 px-1 py-3 text-slate-200">
-                Back in 2021, I decided to try my hand at creating websites and
-                tumbled head first into the rabbit hole of coding and web
-                development.
+                I’m a Software Engineer specializing in Frontend development
+                with crafting high-performance web and cross-platform
+                applications.
               </p>
               <p className="mb-4 mt-2 px-1 py-3 text-slate-200">
-                My main focus these days is learning more about web development
-                and building cool stuff.
+                My expertise lies in creating optimized, user-centric
+                applications using React.js, Next.js, and MERN. A performance
+                enthusiast at heart, I am committed to enhancing user
+                experiences by continuously improving application efficiency.
+                Alongside my frontend skills, I have a solid understanding of
+                backend technologies and DevOps tools, and I am well-versed in
+                Problem Solving.
               </p>
               <p className="mb-4 mt-2 px-1 py-3 text-slate-200">
-                When I’m not at the computer, I’m usually rock climbing, hanging
-                out with my family or watching any trending web-series
+                I am constantly exploring new technologies like React Native and
+                backend frameworks to broaden my knowledge. As a dedicated
+                learner and passionate developer, I enjoy sharing my insights
+                through my side projects.
+              </p>
+              <p className="mb-4 mt-2 px-1 py-3 text-slate-200">
+                Mobile: +91 8171244560 | Connect: marufkhan2002@gmail.com
               </p>
             </div>
           </section>
@@ -175,12 +185,12 @@ export default function Home() {
               <h2 className="text-xl text-slate-300">Experience</h2>
             </div>
             <div className="pt-8 px-4 experience_company  cursor-pointer ">
-              <p className="text-slate-300 text-sm py-2">Aug 2022 - Present</p>
+              <p className="text-slate-300 text-sm py-2">Feb 2024 - Aug 2024</p>
               <p className="text- text-slate-200 font-bold py-1">
                 Frontend Engineer,{" "}
                 <a href="#" target="_blank">
                   <span className="inline-block">
-                    HMX Media
+                    Waffle Bytes
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       viewBox="0 0 20 20"
@@ -198,14 +208,25 @@ export default function Home() {
                 </a>
               </p>
               <p className="text-slate-300 py-2 ">
-                Collaborated with the product team, Backend team, and Design
-                team to design, build, test, and improve the product using agile
-                methodologies and tools such as Jira, Ftrack etc.
+                Developed highly responsive, user-centric interfaces using
+                React.js, Next.js, and Tailwind CSS, significantly enhancing
+                user experience and resulting in a 25% increase in user
+                satisfaction and engagement.
               </p>
-
               <p className="text-slate-300 py-2 ">
-                Developed and maintained responsive web applications using
-                TypeScript, React, React query, JavaScript, WebAPI, Redux.{" "}
+                Optimized the application architecture by implementing reusable
+                React components and integrating Redux Toolkit for state
+                management, which led to a 30% boost in code maintainability and
+                scalability.Optimized the application architecture by
+                implementing reusable React components and integrating Redux
+                Toolkit for state management, which led to a 30% boost in code
+                maintainability and scalability.
+              </p>
+              <p className="text-slate-300 py-2 ">
+                Collaborated closely with stakeholders to gather feedback and
+                iteratively refine feature design and functionality, leading to
+                a 15% improvement in debugging tools, which reduced issue
+                resolution time and enhanced the overall development workflow.
               </p>
 
               <ul className="flex skills flex-wrap mt-2">
@@ -217,7 +238,13 @@ export default function Home() {
 
                 <li className="mt-2 mr-1.5">
                   <div className="text-teal-300 rounded-full leading-5 flex items-center bg-teal-400/10 px-3 py-1 font-medium text-xs">
-                    TypeScript
+                    NextJs
+                  </div>
+                </li>
+
+                <li className="mt-2 mr-1.5">
+                  <div className="text-teal-300 rounded-full leading-5 flex items-center bg-teal-400/10 px-3 py-1 font-medium text-xs">
+                    Tailwind CSS
                   </div>
                 </li>
 
@@ -241,24 +268,13 @@ export default function Home() {
 
                 <li className="mt-2 mr-1.5">
                   <div className="text-teal-300 rounded-full leading-5 flex items-center bg-teal-400/10 px-3 py-1 font-medium text-xs">
-                    Web API
-                  </div>
-                </li>
-
-                <li className="mt-2 mr-1.5">
-                  <div className="text-teal-300 rounded-full leading-5 flex items-center bg-teal-400/10 px-3 py-1 font-medium text-xs">
-                    Material UI
-                  </div>
-                </li>
-
-                <li className="mt-2 mr-1.5">
-                  <div className="text-teal-300 rounded-full leading-5 flex items-center bg-teal-400/10 px-3 py-1 font-medium text-xs">
                     REST API
                   </div>
                 </li>
               </ul>
             </div>
           </section>
+
           {/* Projects */}
           <section
             id="projects"
