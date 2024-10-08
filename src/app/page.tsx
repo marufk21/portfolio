@@ -182,7 +182,7 @@ export default function Home() {
             id="experience"
             className="mb-16 scroll-mt-16 md:mb-24 lg:mb-36 lg:scroll-mt-24"
           >
-             <div className="sticky top-0 z-20 bg-slate-900/75 backdrop-blur">
+            <div className="sticky top-0 z-20 bg-slate-900/75 backdrop-blur">
               <h2 className="text-2xl text-slate-300">Experience</h2>
             </div>
 
@@ -207,7 +207,9 @@ export default function Home() {
                     </svg>
                   </span>{" "}
                 </a>
-                <p className="text-slate-300 text-sm py-2">Feb 2024 - Aug 2024</p>
+                <p className="text-slate-300 text-sm py-2">
+                  Feb 2024 - Aug 2024
+                </p>
               </p>
               <p className="text-slate-300 py-2 ">
                 Developed highly responsive, user-centric interfaces using
@@ -282,20 +284,20 @@ export default function Home() {
             id="projects"
             className="mb-16 scroll-mt-16 md:mb-24 lg:mb-36 lg:scroll-mt-24 "
           >
-             <div className="sticky top-0 z-20 bg-slate-900/75 backdrop-blur">
+            <div className="sticky top-0 z-20 bg-slate-900/75 backdrop-blur">
               <h2 className="text-2xl text-slate-300">Projects</h2>
             </div>
-
+            {/* Project 1 */}
             <div className="pt-8 px-4 project_card">
               <p className=" text-slate-200 font-bold py-1">
                 {" "}
                 <a
-                  href="https://blogbrief.netlify.app/"
+                  href="https://vibesta.onrender.com/"
                   target="_blank"
                   className="text-lg"
                 >
                   <span className="inline-block">
-                    BlogBrief
+                    Vibesta
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       viewBox="0 0 20 20"
@@ -316,7 +318,7 @@ export default function Home() {
                 <ul className="py-2 px-2 ">
                   <li className="mr-5 text-xs">
                     <a
-                      href="https://github.com/amanmulani09/BlogBrief"
+                      href="https://github.com/marufk21/Vibesta"
                       target="_blank"
                       className="block hover:text-slate-200 text-slate-400"
                     >
@@ -336,30 +338,52 @@ export default function Home() {
               </div>
               <ul className="py-2">
                 <li className="text-sm py-2  text-slate-300">
-                  Simplify blog reading with concise summaries.
+                  A social media app allows users to sign up, log in, and access
+                  personalized features. They can share photos, create profiles,
+                  and interact with content through likes and comments in a
+                  dynamic feed of posts from people they follow.
                 </li>
                 <li className="text-sm py-2  text-slate-300">
-                  Extract key information from lengthy articles, saving time
-                  while staying informed.
+                  It also includes real-time chat messaging for seamless
+                  communication with friends and profile customization options,
+                  such as updating personal details and profile pictures.
                 </li>
               </ul>
 
               <ul className="flex skills flex-wrap mt-2">
                 <li className="mt-2 mr-1.5">
                   <div className="text-teal-300 rounded-full leading-5 flex items-center bg-teal-400/10 px-3 py-1 font-medium text-xs">
-                    ReactJs
+                    MERN Stack
                   </div>
                 </li>
 
                 <li className="mt-2 mr-1.5">
                   <div className="text-teal-300 rounded-full leading-5 flex items-center bg-teal-400/10 px-3 py-1 font-medium text-xs">
-                    Tailwind-CSS
+                    axios
                   </div>
                 </li>
 
                 <li className="mt-2 mr-1.5">
                   <div className="text-teal-300 rounded-full leading-5 flex items-center bg-teal-400/10 px-3 py-1 font-medium text-xs">
-                    Redux Toolkit Query
+                    shadcn UI
+                  </div>
+                </li>
+
+                <li className="mt-2 mr-1.5">
+                  <div className="text-teal-300 rounded-full leading-5 flex items-center bg-teal-400/10 px-3 py-1 font-medium text-xs">
+                    sockets
+                  </div>
+                </li>
+
+                <li className="mt-2 mr-1.5">
+                  <div className="text-teal-300 rounded-full leading-5 flex items-center bg-teal-400/10 px-3 py-1 font-medium text-xs">
+                    bcrypt
+                  </div>
+                </li>
+
+                <li className="mt-2 mr-1.5">
+                  <div className="text-teal-300 rounded-full leading-5 flex items-center bg-teal-400/10 px-3 py-1 font-medium text-xs">
+                    jwt-tokens
                   </div>
                 </li>
               </ul>
@@ -372,17 +396,17 @@ export default function Home() {
                 className="py-4 rounded bg-transparent"
               />
             </div>
-
+            {/* Project 2 */}
             <div className="pt-8 px-4 project_card">
               <p className=" text-slate-200 font-bold py-1">
                 {" "}
                 <a
-                  href="https://webhubnew.netlify.app/"
+                  href="https://streamtalk.onrender.com/"
                   target="_blank"
                   className="text-lg"
                 >
                   <span className="inline-block">
-                    WebHub
+                    StreamTalk
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       viewBox="0 0 20 20"
@@ -403,7 +427,7 @@ export default function Home() {
                 <ul className="py-2 px-2 ">
                   <li className="mr-5 text-xs">
                     <a
-                      href="https://github.com/amanmulani09/webHub"
+                      href="https://github.com/marufk21/StreamTalk"
                       target="_blank"
                       className="block hover:text-slate-200 text-slate-400"
                     >
@@ -423,102 +447,16 @@ export default function Home() {
               </div>
               <ul className="py-2">
                 <li className="text-sm py-2  text-slate-300">
-                  A cutting-edge video streaming platform tailored for
-                  developers. Discover high-quality tutorials on various tools
-                  and technologies.
+                  StreamTalk is a real-time video calling app built with
+                  Next.js, Socket.IO, and WebRTC, enabling seamless audio and
+                  video communication with high-quality peer-to-peer calls and
+                  low latency.
                 </li>
                 <li className="text-sm py-2  text-slate-300">
-                  featuring user-friendly features like category-based video
-                  filtering, search functionality, like and watch later
-                  management.{" "}
-                </li>
-              </ul>
-
-              <ul className="flex skills flex-wrap mt-2">
-                <li className="mt-2 mr-1.5">
-                  <div className="text-teal-300 rounded-full leading-5 flex items-center bg-teal-400/10 px-3 py-1 font-medium text-xs">
-                    ReactJs
-                  </div>
-                </li>
-
-                <li className="mt-2 mr-1.5">
-                  <div className="text-teal-300 rounded-full leading-5 flex items-center bg-teal-400/10 px-3 py-1 font-medium text-xs">
-                    React Router
-                  </div>
-                </li>
-
-                <li className="mt-2 mr-1.5">
-                  <div className="text-teal-300 rounded-full leading-5 flex items-center bg-teal-400/10 px-3 py-1 font-medium text-xs">
-                    Material-UI
-                  </div>
-                </li>
-              </ul>
-
-              <Image
-                src="/assets/webhub.webp"
-                alt="project_snapshot"
-                width={300}
-                height={48}
-                className="py-4 rounded bg-transparent"
-              />
-            </div>
-
-            <div className="pt-8 px-4 project_card">
-              <p className=" text-slate-200 font-bold py-1">
-                {" "}
-                <a
-                  href="https://github.com/amanmulani09/codepen-clone"
-                  target="_blank"
-                  className="text-lg"
-                >
-                  <span className="inline-block">
-                    Code-Pen Clone
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      viewBox="0 0 20 20"
-                      fill="currentColor"
-                      className="inline-block h-4 w-4 shrink-0 transition-transform group-hover/link:-translate-y-1 group-hover/link:translate-x-1 group-focus-visible/link:-translate-y-1 group-focus-visible/link:translate-x-1 motion-reduce:transition-none ml-1 translate-y-px"
-                      aria-hidden="true"
-                    >
-                      <path
-                        fillRule="evenodd"
-                        d="M5.22 14.78a.75.75 0 001.06 0l7.22-7.22v5.69a.75.75 0 001.5 0v-7.5a.75.75 0 00-.75-.75h-7.5a.75.75 0 000 1.5h5.69l-7.22 7.22a.75.75 0 000 1.06z"
-                        clipRule="evenodd"
-                      ></path>
-                    </svg>
-                  </span>{" "}
-                </a>
-              </p>
-              <div id="actionButtons" className="flex">
-                <ul className="py-2 px-2 ">
-                  <li className="mr-5 text-xs">
-                    <a
-                      href="https://github.com/amanmulani09/codepen-clone"
-                      target="_blank"
-                      className="block hover:text-slate-200 text-slate-400"
-                    >
-                      <span className="sr-only">GitHub</span>
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        viewBox="0 0 16 16"
-                        fill="currentColor"
-                        className="h-6 w-6"
-                        aria-hidden="true"
-                      >
-                        <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"></path>
-                      </svg>
-                    </a>
-                  </li>
-                </ul>
-              </div>
-              <ul className="py-2">
-                <li className="text-sm py-2  text-slate-300">
-                  A dynamic code sharing platform inspired by CodePen, developed
-                  using Next.js
-                </li>
-                <li className="text-sm py-2  text-slate-300">
-                  Experience seamless code with real-time previews, syntax
-                  highlighting, and customizable layouts{" "}
+                  It supports screen sharing and multi-participant calls,
+                  providing a responsive interface across devices, making it
+                  ideal for virtual meetings and staying connected with friends
+                  and family.
                 </li>
               </ul>
 
@@ -531,36 +469,36 @@ export default function Home() {
 
                 <li className="mt-2 mr-1.5">
                   <div className="text-teal-300 rounded-full leading-5 flex items-center bg-teal-400/10 px-3 py-1 font-medium text-xs">
-                    API
+                    WebRTC
                   </div>
                 </li>
 
                 <li className="mt-2 mr-1.5">
                   <div className="text-teal-300 rounded-full leading-5 flex items-center bg-teal-400/10 px-3 py-1 font-medium text-xs">
-                    Tailwind-CSS
+                    Sockets
                   </div>
                 </li>
               </ul>
 
               <Image
-                src="/assets/codepen.webp"
+                src="/assets/webhub.webp"
                 alt="project_snapshot"
                 width={300}
                 height={48}
                 className="py-4 rounded bg-transparent"
               />
             </div>
-
+            {/* Project 3 */}
             <div className="pt-8 px-4 project_card">
               <p className=" text-slate-200 font-bold py-1">
                 {" "}
                 <a
-                  href="https://crytoverselatest.netlify.app/"
+                  href="https://github.com/marufk21/ElectriKart"
                   target="_blank"
                   className="text-lg"
                 >
                   <span className="inline-block">
-                    CryptoVerse
+                    Electrikart
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       viewBox="0 0 20 20"
@@ -581,7 +519,7 @@ export default function Home() {
                 <ul className="py-2 px-2 ">
                   <li className="mr-5 text-xs">
                     <a
-                      href="https://github.com/amanmulani09/cryptoverse"
+                      href="https://electrikart.netlify.app/"
                       target="_blank"
                       className="block hover:text-slate-200 text-slate-400"
                     >
@@ -601,9 +539,112 @@ export default function Home() {
               </div>
               <ul className="py-2">
                 <li className="text-sm py-2  text-slate-300">
-                  An Infographic web application which provides features
-                  including real-time data tracking, detailed information
-                  lookup, and trend analysis for various cryptocurrencies
+                  An Ecommerce Store with an interactive UI, including carousels
+                  and product cards. The Products Page has a sidebar for
+                  filtering search results by categories, colors, and price
+                  ranges for easy browsing. Each Single Product Page offers
+                  detailed information on functionality, images, descriptions,
+                  reviews, and availability.
+                </li>
+                <li className="text-sm py-2  text-slate-300">
+                  The Cart Page displays items in the user's cart, including
+                  images, prices, quantities, subtotal, and shipping fees, with
+                  options to remove items or clear the cart. The Contact Page
+                  allows users to provide feedback or file complaints, ensuring
+                  effective communication.
+                </li>
+              </ul>
+
+              <ul className="flex skills flex-wrap mt-2">
+                <li className="mt-2 mr-1.5">
+                  <div className="text-teal-300 rounded-full leading-5 flex items-center bg-teal-400/10 px-3 py-1 font-medium text-xs">
+                    ReactJS
+                  </div>
+                </li>
+
+                <li className="mt-2 mr-1.5">
+                  <div className="text-teal-300 rounded-full leading-5 flex items-center bg-teal-400/10 px-3 py-1 font-medium text-xs">
+                    Hooks
+                  </div>
+                </li>
+
+                <li className="mt-2 mr-1.5">
+                  <div className="text-teal-300 rounded-full leading-5 flex items-center bg-teal-400/10 px-3 py-1 font-medium text-xs">
+                    Context-API
+                  </div>
+                </li>
+                <li className="mt-2 mr-1.5">
+                  <div className="text-teal-300 rounded-full leading-5 flex items-center bg-teal-400/10 px-3 py-1 font-medium text-xs">
+                    React-Router
+                  </div>
+                </li>
+              </ul>
+
+              <Image
+                src="/assets/RGB_TO_HEX.webp"
+                alt="project_snapshot"
+                width={300}
+                height={48}
+                className="py-4 rounded bg-transparent"
+              />
+            </div>
+            {/* Project 4 */}
+            <div className="pt-8 px-4 project_card">
+              <p className=" text-slate-200 font-bold py-1">
+                {" "}
+                <a
+                  href="https://github.com/marufk21/InfiniChat"
+                  target="_blank"
+                  className="text-lg"
+                >
+                  <span className="inline-block">
+                    InfiniChat
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 20 20"
+                      fill="currentColor"
+                      className="inline-block h-4 w-4 shrink-0 transition-transform group-hover/link:-translate-y-1 group-hover/link:translate-x-1 group-focus-visible/link:-translate-y-1 group-focus-visible/link:translate-x-1 motion-reduce:transition-none ml-1 translate-y-px"
+                      aria-hidden="true"
+                    >
+                      <path
+                        fillRule="evenodd"
+                        d="M5.22 14.78a.75.75 0 001.06 0l7.22-7.22v5.69a.75.75 0 001.5 0v-7.5a.75.75 0 00-.75-.75h-7.5a.75.75 0 000 1.5h5.69l-7.22 7.22a.75.75 0 000 1.06z"
+                        clipRule="evenodd"
+                      ></path>
+                    </svg>
+                  </span>{" "}
+                </a>
+              </p>
+              <div id="actionButtons" className="flex">
+                <ul className="py-2 px-2 ">
+                  <li className="mr-5 text-xs">
+                    <a
+                      href="https://main--infinichat.netlify.app/"
+                      target="_blank"
+                      className="block hover:text-slate-200 text-slate-400"
+                    >
+                      <span className="sr-only">GitHub</span>
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 16 16"
+                        fill="currentColor"
+                        className="h-6 w-6"
+                        aria-hidden="true"
+                      >
+                        <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"></path>
+                      </svg>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+              <ul className="py-2">
+                <li className="text-sm py-2  text-slate-300">
+                  Infinitychat is a AI chatbot application designed to offer
+                  seamless messaging with a modern user interface. Key features
+                  include real-time messaging, an attractive user-friendly
+                  design, and enhanced functionality through Gemini API
+                  integration, ensuring an engaging and efficient chat
+                  experience for users.
                 </li>
               </ul>
 
@@ -616,36 +657,41 @@ export default function Home() {
 
                 <li className="mt-2 mr-1.5">
                   <div className="text-teal-300 rounded-full leading-5 flex items-center bg-teal-400/10 px-3 py-1 font-medium text-xs">
-                    Redux-Toolkit
+                    Tailwind-CSS
                   </div>
                 </li>
 
                 <li className="mt-2 mr-1.5">
                   <div className="text-teal-300 rounded-full leading-5 flex items-center bg-teal-400/10 px-3 py-1 font-medium text-xs">
-                    ANT-Design
+                    Gemini-API
+                  </div>
+                </li>
+                <li className="mt-2 mr-1.5">
+                  <div className="text-teal-300 rounded-full leading-5 flex items-center bg-teal-400/10 px-3 py-1 font-medium text-xs">
+                    chatbot
                   </div>
                 </li>
               </ul>
 
               <Image
-                src="/assets/cryptoverse.webp"
+                src="/assets/codepen.webp"
                 alt="project_snapshot"
                 width={300}
                 height={48}
                 className="py-4 rounded bg-transparent"
               />
             </div>
-
+            {/* Project 5 */}
             <div className="pt-8 px-4 project_card">
               <p className=" text-slate-200 font-bold py-1">
                 {" "}
                 <a
-                  href="https://github.com/amanmulani09/RGB_To_Hex-converter-Chrome-Extension"
+                  href="https://github.com/marufk21/F1-Racing-Extension"
                   target="_blank"
                   className="text-lg"
                 >
                   <span className="inline-block">
-                    RGB_To_Hex-converter-Chrome-Extension
+                    F1-Extension
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       viewBox="0 0 20 20"
@@ -666,7 +712,7 @@ export default function Home() {
                 <ul className="py-2 px-2 ">
                   <li className="mr-5 text-xs">
                     <a
-                      href="https://github.com/amanmulani09/RGB_To_Hex-converter-Chrome-Extension"
+                      href="https://github.com/marufk21/F1-Racing-Extension"
                       target="_blank"
                       className="block hover:text-slate-200 text-slate-400"
                     >
@@ -686,33 +732,34 @@ export default function Home() {
               </div>
               <ul className="py-2">
                 <li className="text-sm py-2  text-slate-300">
-                  A Simple Chrome Extension for making your Development
-                  Experience Better ✌
+                  The F1 Racing Extension is a Chrome extension for Formula 1
+                  fans, offering quick access to upcoming race schedules and the
+                  complete 2023 race calendar.
+                </li>
+                <li className="text-sm py-2  text-slate-300">
+                  It also features the latest driver standings, allowing users
+                  to track their favorite drivers' performances. With its
+                  user-friendly interface, the extension keeps fans connected to
+                  the excitement of Formula 1 racing.
                 </li>
               </ul>
 
               <ul className="flex skills flex-wrap mt-2">
                 <li className="mt-2 mr-1.5">
                   <div className="text-teal-300 rounded-full leading-5 flex items-center bg-teal-400/10 px-3 py-1 font-medium text-xs">
-                    JavScript
+                    ReactJs
                   </div>
                 </li>
 
                 <li className="mt-2 mr-1.5">
                   <div className="text-teal-300 rounded-full leading-5 flex items-center bg-teal-400/10 px-3 py-1 font-medium text-xs">
-                    JSON
-                  </div>
-                </li>
-
-                <li className="mt-2 mr-1.5">
-                  <div className="text-teal-300 rounded-full leading-5 flex items-center bg-teal-400/10 px-3 py-1 font-medium text-xs">
-                    Tailwind-CSS
+                    Chrome-Extension
                   </div>
                 </li>
               </ul>
 
               <Image
-                src="/assets/RGB_TO_HEX.webp"
+                src="/assets/cryptoverse.webp"
                 alt="project_snapshot"
                 width={300}
                 height={48}
