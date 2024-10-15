@@ -1,4 +1,4 @@
-# Profolio
+# Portfolio
 
 My personal portfolio project showcasing my development projects and skills. This website features a clean and modern design that highlights my expertise and passion for web development.
 
