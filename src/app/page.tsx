@@ -1,5 +1,5 @@
 import Image from "next/image";
-import moduleName from './assets/ecommerce.png'
+
 
 export default function Home() {
   return (
@@ -390,7 +390,7 @@ export default function Home() {
               </ul>
 
               <Image
-                src="/assets/vibesta.jpg"
+                src="./assets/vibesta.jpg"
                 alt="project_snapshot"
                 width={300}
                 height={48}
@@ -482,7 +482,7 @@ export default function Home() {
               </ul>
 
               <Image
-                src="/assets/streamtalk.jpg"
+                src="./assets/streamtalk.jpg"
                 alt="project_snapshot"
                 width={300}
                 height={48}
@@ -582,7 +582,7 @@ export default function Home() {
               </ul>
 
               <Image
-                src="/assets/ecommerce.png"
+                src="./assets/ecommerce.png"
                 alt="project_snapshot"
                 width={300}
                 height={48}
@@ -675,7 +675,7 @@ export default function Home() {
               </ul>
 
               <Image
-                src="/assets/infinichat.jpg"
+                src="./assets/infinichat.jpg"
                 alt="project_snapshot"
                 width={300}
                 height={48}
@@ -761,7 +761,7 @@ export default function Home() {
               </ul>
 
               <Image
-                src="/assets/f1extension.png"
+                src="./assets/f1extension.png"
                 alt="project_snapshot"
                 width={300}
                 height={48}
