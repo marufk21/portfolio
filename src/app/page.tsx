@@ -1,4 +1,5 @@
 import Image from "next/image";
+import moduleName from './assets/ecommerce.png'
 
 export default function Home() {
   return (
@@ -389,7 +390,7 @@ export default function Home() {
               </ul>
 
               <Image
-                src="/assets/blog_brief.webp"
+                src="/assets/vibesta.jpg"
                 alt="project_snapshot"
                 width={300}
                 height={48}
@@ -481,7 +482,7 @@ export default function Home() {
               </ul>
 
               <Image
-                src="/assets/webhub.webp"
+                src="/assets/streamtalk.jpg"
                 alt="project_snapshot"
                 width={300}
                 height={48}
@@ -581,7 +582,7 @@ export default function Home() {
               </ul>
 
               <Image
-                src="/assets/RGB_TO_HEX.webp"
+                src="/assets/ecommerce.png"
                 alt="project_snapshot"
                 width={300}
                 height={48}
@@ -674,7 +675,7 @@ export default function Home() {
               </ul>
 
               <Image
-                src="/assets/codepen.webp"
+                src="/assets/infinichat.jpg"
                 alt="project_snapshot"
                 width={300}
                 height={48}
@@ -708,6 +709,7 @@ export default function Home() {
                   </span>{" "}
                 </a>
               </p>
+              {/* Project6 */}
               <div id="actionButtons" className="flex">
                 <ul className="py-2 px-2 ">
                   <li className="mr-5 text-xs">
@@ -759,7 +761,7 @@ export default function Home() {
               </ul>
 
               <Image
-                src="/assets/cryptoverse.webp"
+                src="/assets/f1extension.png"
                 alt="project_snapshot"
                 width={300}
                 height={48}
