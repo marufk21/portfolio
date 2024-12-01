@@ -156,7 +156,6 @@ export default function Home() {
       <main className="_main_container lg:flex lg:justify-between lg:gap-4">
         {/* LeftSide-Introduction--Navbar--ResumeDownload--SocialLinks */}
         <header className="lg:sticky lg:top-0 lg:flex lg:max-h-screen lg:w-1/2 lg:flex-col lg:justify-between lg:py-24">
-
           {/* Introduction */}
           <div className="personal_heading ">
             <h3 className="text-4xl font-bold tracking-tight text-slate-200 sm:text-5xl">
@@ -214,7 +213,6 @@ export default function Home() {
               </a>{" "}
             </p>
           </div>
-
           {/* SocialLinks */}
           <ul className="ml-1 mt-8 flex items-center">
 
@@ -298,7 +296,6 @@ export default function Home() {
 
           </ul>
         </header>
-        `1`
         {/* RightSide-About--Experience--Experience */}
         <main className="_main_content pt-24 lg:w-1/2 lg:py-24">
           {/* About */}
