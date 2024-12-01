@@ -23,7 +23,7 @@ const projects = [
       "bcrypt",
       "jwt-tokens",
     ],
-    image: { vibesta },
+    image:  vibesta ,
   },
   {
     id: 2,
@@ -35,7 +35,7 @@ const projects = [
       "It supports screen sharing and multi-participant calls, providing a responsive interface across devices, making it ideal for virtual meetings and staying connected with friends and family.",
     ],
     skills: ["NextJs", "WebRTC", "Sockets", "Tailwind CSS", "NodeJs"],
-    image: { streamtalk },
+    image: streamtalk ,
   },
 
   {
@@ -49,7 +49,7 @@ const projects = [
       "The Cart Page displays items in the user's cart, including images, prices, quantities, subtotal, and shipping fees, with options to remove items or clear the cart. The Contact Page allows users to provide feedback or file complaints, ensuring effective communication.",
     ],
     skills: ["ReactJS", "Hooks", "Context-API", "React-Router"],
-    image: { electrikart },
+    image: electrikart ,
   },
   {
     id: 4,
@@ -60,7 +60,7 @@ const projects = [
       "Infinitychat is an AI chatbot application designed to offer seamless messaging with a modern user interface. Key features include real-time messaging, an attractive user-friendly design, and enhanced functionality through Gemini API integration, ensuring an engaging and efficient chat experience for users.",
     ],
     skills: ["ReactJS", "Tailwind-CSS", "Gemini-API", "Chatbot"],
-    image: { infinichat },
+    image:  infinichat ,
   },
   {
     id: 5,
@@ -71,7 +71,7 @@ const projects = [
       "F1 Racing Extension is a browser extension for Formula 1 enthusiasts that provides real-time updates about the races, including race results, schedules, and more. This extension enhances the F1 experience by offering up-to-date information directly in your browser.",
     ],
     skills: ["ReactJS", "Chrome Extensions", "JavaScript"],
-    image: { f1extension },
+    image:  f1extension ,
   },
 ];
 
@@ -139,6 +139,7 @@ const ProjectCard = ({ project }) => (
         <SkillTag key={index} skill={skill} />
       ))}
     </ul>
+    
     <Image
       src={project.image}
       alt={`${project.title}_snapshot`}
