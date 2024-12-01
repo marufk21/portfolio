@@ -5,11 +5,24 @@ import electrikart from './assets/electrikart.png'
 import infinichat from './assets/infinichat.jpg'
 import f1extension from './assets/f1extension.png'
 
+// Project-Orderlist
 const projects = [
   {
     id: 1,
+    title: "StreamTalk",
+    link: "https://streamtalk.onrender.com",
+    github: "https://github.com/marufk21/StreamTalk",
+    description: [
+      "StreamTalk is a real-time video calling app built with Next.js, Socket.IO, and WebRTC, enabling seamless audio and video communication with high-quality peer-to-peer calls and low latency.",
+      "It supports screen sharing and multi-participant calls, providing a responsive interface across devices, making it ideal for virtual meetings and staying connected with friends and family.",
+    ],
+    skills: ["NextJs", "WebRTC", "Sockets", "Tailwind CSS", "NodeJs"],
+    image: streamtalk,
+  },
+  {
+    id: 2,
     title: "Vibesta",
-    link: "https://vibesta.onrender.com/",
+    link: "https://vibesta.onrender.com",
     github: "https://github.com/marufk21/Vibesta",
     description: [
       "A social media app allows users to sign up, log in, and access personalized features. They can share photos, create profiles, and interact with content through likes and comments in a dynamic feed of posts from people they follow.",
@@ -23,25 +36,12 @@ const projects = [
       "bcrypt",
       "jwt-tokens",
     ],
-    image:  vibesta ,
+    image: vibesta,
   },
-  {
-    id: 2,
-    title: "StreamTalk",
-    link: "https://streamtalk.onrender.com/",
-    github: "https://github.com/marufk21/StreamTalk",
-    description: [
-      "StreamTalk is a real-time video calling app built with Next.js, Socket.IO, and WebRTC, enabling seamless audio and video communication with high-quality peer-to-peer calls and low latency.",
-      "It supports screen sharing and multi-participant calls, providing a responsive interface across devices, making it ideal for virtual meetings and staying connected with friends and family.",
-    ],
-    skills: ["NextJs", "WebRTC", "Sockets", "Tailwind CSS", "NodeJs"],
-    image: streamtalk ,
-  },
-
   {
     id: 3,
     title: "Electrikart",
-    link: "https://electrikart.netlify.app/",
+    link: "https://electrikart.netlify.app",
     github: "https://github.com/marufk21/ElectriKart",
     description: [
       "An Ecommerce Store with an interactive UI, including carousels and product cards. The Products Page has a sidebar for filtering search results by categories, colors, and price ranges for easy browsing.",
@@ -49,7 +49,7 @@ const projects = [
       "The Cart Page displays items in the user's cart, including images, prices, quantities, subtotal, and shipping fees, with options to remove items or clear the cart. The Contact Page allows users to provide feedback or file complaints, ensuring effective communication.",
     ],
     skills: ["ReactJS", "Hooks", "Context-API", "React-Router"],
-    image: electrikart ,
+    image: electrikart,
   },
   {
     id: 4,
@@ -60,7 +60,7 @@ const projects = [
       "Infinitychat is an AI chatbot application designed to offer seamless messaging with a modern user interface. Key features include real-time messaging, an attractive user-friendly design, and enhanced functionality through Gemini API integration, ensuring an engaging and efficient chat experience for users.",
     ],
     skills: ["ReactJS", "Tailwind-CSS", "Gemini-API", "Chatbot"],
-    image:  infinichat ,
+    image: infinichat,
   },
   {
     id: 5,
@@ -71,18 +71,11 @@ const projects = [
       "F1 Racing Extension is a browser extension for Formula 1 enthusiasts that provides real-time updates about the races, including race results, schedules, and more. This extension enhances the F1 experience by offering up-to-date information directly in your browser.",
     ],
     skills: ["ReactJS", "Chrome Extensions", "JavaScript"],
-    image:  f1extension ,
+    image: f1extension,
   },
 ];
 
-const SkillTag = ({ skill }) => (
-  <li className="mt-2 mr-1.5">
-    <div className="text-teal-300 rounded-full leading-5 flex items-center bg-teal-400/10 px-3 py-1 font-medium text-xs">
-      {skill}
-    </div>
-  </li>
-);
-
+// Project-Card
 const ProjectCard = ({ project }) => (
   <div className="pt-8 px-4 project_card">
     <p className="text-slate-200 font-bold py-1">
@@ -139,7 +132,7 @@ const ProjectCard = ({ project }) => (
         <SkillTag key={index} skill={skill} />
       ))}
     </ul>
-    
+
     <Image
       src={project.image}
       alt={`${project.title}_snapshot`}
@@ -149,12 +142,22 @@ const ProjectCard = ({ project }) => (
     />
   </div>
 );
+const SkillTag = ({ skill }) => (
+  <li className="mt-2 mr-1.5">
+    <div className="text-teal-300 rounded-full leading-5 flex items-center bg-teal-400/10 px-3 py-1 font-medium text-xs">
+      {skill}
+    </div>
+  </li>
+);
 
 export default function Home() {
   return (
     <div className="mx-auto min-h-screen max-w-screen-xl px-6 py-12 font-sans md:px-12 md:py-20 lg:px-24 lg:py-0">
       <main className="_main_container lg:flex lg:justify-between lg:gap-4">
+        {/* LeftSide-Introduction--Navbar--ResumeDownload--SocialLinks */}
         <header className="lg:sticky lg:top-0 lg:flex lg:max-h-screen lg:w-1/2 lg:flex-col lg:justify-between lg:py-24">
+
+          {/* Introduction */}
           <div className="personal_heading ">
             <h3 className="text-4xl font-bold tracking-tight text-slate-200 sm:text-5xl">
               Maruf Khan
@@ -166,6 +169,7 @@ export default function Home() {
               I focus on coding web experiences that are navigable and engaging
               for everyone.
             </p>
+            {/* Navbar */}
             <nav
               className="nav hidden lg:block"
               aria-label="In-page jump links"
@@ -203,31 +207,16 @@ export default function Home() {
                 </li>
               </ul>
             </nav>
+            {/* ResumeDownload */}
             <p className="mt-3 px-2 font-bold text-lg rounded bg-transparent text-slate-200 border-dashed border-slate-300">
               <a href="https://drive.google.com/drive/folders/1SYKXDHFdwqV2zSI1_TcN5j3dZzdgPNA-">
                 View Resume
               </a>{" "}
             </p>
           </div>
+
+          {/* SocialLinks */}
           <ul className="ml-1 mt-8 flex items-center">
-            <li className="mr-5 text-xs">
-              <a
-                href="https://www.linkedin.com/in/marufk21/"
-                target="_blank"
-                className="block hover:text-slate-200 text-slate-400"
-              >
-                <span className="sr-only">Linkedin</span>
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 24 24"
-                  fill="currentColor"
-                  className="h-6 w-6"
-                  aria-hidden="true"
-                >
-                  <path d="M20.5 2h-17A1.5 1.5 0 002 3.5v17A1.5 1.5 0 003.5 22h17a1.5 1.5 0 001.5-1.5v-17A1.5 1.5 0 0020.5 2zM8 19H5v-9h3zM6.5 8.25A1.75 1.75 0 118.3 6.5a1.78 1.78 0 01-1.8 1.75zM19 19h-3v-4.74c0-1.42-.6-1.93-1.38-1.93A1.74 1.74 0 0013 14.19a.66.66 0 000 .14V19h-3v-9h2.9v1.3a3.11 3.11 0 012.7-1.4c1.55 0 3.36.86 3.36 3.66z"></path>
-                </svg>
-              </a>
-            </li>
 
             <li className="mr-5 text-xs">
               <a
@@ -250,22 +239,19 @@ export default function Home() {
 
             <li className="mr-5 text-xs">
               <a
-                href="https://x.com/marufique"
+                href="https://www.linkedin.com/in/marufk21/"
                 target="_blank"
                 className="block hover:text-slate-200 text-slate-400"
               >
-                <span className="sr-only">Twitter</span>
+                <span className="sr-only">Linkedin</span>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 248 204"
+                  viewBox="0 0 24 24"
                   fill="currentColor"
                   className="h-6 w-6"
                   aria-hidden="true"
                 >
-                  <path
-                    id="white_background"
-                    d="M221.95,51.29c0.15,2.17,0.15,4.34,0.15,6.53c0,66.73-50.8,143.69-143.69,143.69v-0.04   C50.97,201.51,24.1,193.65,1,178.83c3.99,0.48,8,0.72,12.02,0.73c22.74,0.02,44.83-7.61,62.72-21.66   c-21.61-0.41-40.56-14.5-47.18-35.07c7.57,1.46,15.37,1.16,22.8-0.87C27.8,117.2,10.85,96.5,10.85,72.46c0-0.22,0-0.43,0-0.64   c7.02,3.91,14.88,6.08,22.92,6.32C11.58,63.31,4.74,33.79,18.14,10.71c25.64,31.55,63.47,50.73,104.08,52.76   c-4.07-17.54,1.49-35.92,14.61-48.25c20.34-19.12,52.33-18.14,71.45,2.19c11.31-2.23,22.15-6.38,32.07-12.26   c-3.77,11.69-11.66,21.62-22.2,27.93c10.01-1.18,19.79-3.86,29-7.95C240.37,35.29,231.83,44.14,221.95,51.29z"
-                  ></path>
+                  <path d="M20.5 2h-17A1.5 1.5 0 002 3.5v17A1.5 1.5 0 003.5 22h17a1.5 1.5 0 001.5-1.5v-17A1.5 1.5 0 0020.5 2zM8 19H5v-9h3zM6.5 8.25A1.75 1.75 0 118.3 6.5a1.78 1.78 0 01-1.8 1.75zM19 19h-3v-4.74c0-1.42-.6-1.93-1.38-1.93A1.74 1.74 0 0013 14.19a.66.66 0 000 .14V19h-3v-9h2.9v1.3a3.11 3.11 0 012.7-1.4c1.55 0 3.36.86 3.36 3.66z"></path>
                 </svg>
               </a>
             </li>
@@ -288,10 +274,34 @@ export default function Home() {
                 </svg>
               </a>
             </li>
+            <li className="mr-5 text-xs">
+              <a
+                href="https://x.com/marufique"
+                target="_blank"
+                className="block hover:text-slate-200 text-slate-400"
+              >
+                <span className="sr-only">Twitter</span>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 248 204"
+                  fill="currentColor"
+                  className="h-6 w-6"
+                  aria-hidden="true"
+                >
+                  <path
+                    id="white_background"
+                    d="M221.95,51.29c0.15,2.17,0.15,4.34,0.15,6.53c0,66.73-50.8,143.69-143.69,143.69v-0.04   C50.97,201.51,24.1,193.65,1,178.83c3.99,0.48,8,0.72,12.02,0.73c22.74,0.02,44.83-7.61,62.72-21.66   c-21.61-0.41-40.56-14.5-47.18-35.07c7.57,1.46,15.37,1.16,22.8-0.87C27.8,117.2,10.85,96.5,10.85,72.46c0-0.22,0-0.43,0-0.64   c7.02,3.91,14.88,6.08,22.92,6.32C11.58,63.31,4.74,33.79,18.14,10.71c25.64,31.55,63.47,50.73,104.08,52.76   c-4.07-17.54,1.49-35.92,14.61-48.25c20.34-19.12,52.33-18.14,71.45,2.19c11.31-2.23,22.15-6.38,32.07-12.26   c-3.77,11.69-11.66,21.62-22.2,27.93c10.01-1.18,19.79-3.86,29-7.95C240.37,35.29,231.83,44.14,221.95,51.29z"
+                  ></path>
+                </svg>
+              </a>
+            </li>
+
           </ul>
         </header>
         `1`
+        {/* RightSide-About--Experience--Experience */}
         <main className="_main_content pt-24 lg:w-1/2 lg:py-24">
+          {/* About */}
           <section
             id="about"
             className="mb-16 scroll-mt-16 md:mb-24 lg:mb-36 lg:scroll-mt-24 "
@@ -326,7 +336,6 @@ export default function Home() {
               </p>
             </div>
           </section>
-
           {/* Experience */}
           <section
             id="experience"
@@ -428,7 +437,6 @@ export default function Home() {
               </ul>
             </div>
           </section>
-
           {/* Projects */}
           <section
             id="projects"
@@ -441,7 +449,33 @@ export default function Home() {
             {projects.map((project) => (
               <ProjectCard key={project.id} project={project} />
             ))}
-
+            <div className="flex justify-center mt-4 ">
+              <button
+                type="button"
+                className="text-white bg-gradient-to-r from-slate-700 to-slate-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-cyan-300 dark:focus:ring-cyan-800 font-bold rounded-2xl text-sm px-5 py-3 text-center mr-2 w-56 my-6 "
+              >
+                <a
+                  href="https://github.com/marufk21?tab=repositories"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  Click for more projects 
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 20 20"
+                    fill="currentColor"
+                    className="inline-block h-5 w-4 translate-y-px"
+                    aria-hidden="true"
+                  >
+                    <path
+                      fillRule="evenodd"
+                      d="M5.22 14.78a.75.75 0 001.06 0l7.22-7.22v5.69a.75.75 0 001.5 0v-7.5a.75.75 0 00-.75-.75h-7.5a.75.75 0 000 1.5h5.69l-7.22 7.22a.75.75 0 000 1.06z"
+                      clipRule="evenodd"
+                    />
+                  </svg>
+                </a>
+              </button>
+            </div>
           </section>
         </main>
       </main>
