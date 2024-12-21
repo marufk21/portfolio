@@ -162,7 +162,7 @@ export default function Home() {
               Maruf Khan
             </h3>
             <p className="mt-3 text-lg font-medium tracking-tight text-slate-200 sm:text-xl">
-              FrontEnd Engineer
+              Full Stack Engineer
             </p>
             <p className="mt-4 max-w-xs leading-normal text-slate-300">
               I focus on coding web experiences that are navigable and engaging
@@ -309,7 +309,7 @@ export default function Home() {
 
             <div>
               <p className="mb-4 mt-2 px-1 py-3 text-slate-200">
-                I’m a Software Engineer specializing in Frontend development
+                I’m a Full Stack Software Engineer specializing in Frontend development
                 with crafting high-performance web and cross-platform
                 applications.
               </p>
