@@ -364,7 +364,7 @@ export default function Home() {
                   </span>{" "}
                 </a>
                 <p className="text-slate-300 text-sm py-2">
-                  Feb 2024 - Aug 2024
+                  July 2024 - Dec. 2024
                 </p>
               </p>
               <p className="text-slate-300 py-2 ">
