@@ -344,10 +344,10 @@ export default function Home() {
 
             <div className="pt-8 px-4 experience_company  cursor-pointer ">
               <p className="text- text-slate-200 font-bold py-1">
-                Frontend Engineer,{" "}
+                SDE Intern ,{" "}
                 <a href="#" target="_blank">
                   <span className="inline-block">
-                    Waffle Bytes
+                    WDMtech Pvt Ltd
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       viewBox="0 0 20 20"
@@ -364,7 +364,7 @@ export default function Home() {
                   </span>{" "}
                 </a>
                 <p className="text-slate-300 text-sm py-2">
-                  July 2024 - Dec. 2024
+                  Jan 2024 - Feb 2025
                 </p>
               </p>
               <p className="text-slate-300 py-2 ">
