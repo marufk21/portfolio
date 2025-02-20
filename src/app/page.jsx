@@ -10,7 +10,7 @@ const projects = [
   {
     id: 1,
     title: "StreamTalk",
-    link: "https://streamtalk.onrender.com",
+    link: "https://stream-talk.vercel.app/",
     github: "https://github.com/marufk21/StreamTalk",
     description: [
       "StreamTalk is a real-time video calling app built with Next.js, Socket.IO, and WebRTC, enabling seamless audio and video communication with high-quality peer-to-peer calls and low latency.",
@@ -364,7 +364,7 @@ export default function Home() {
                   </span>{" "}
                 </a>
                 <p className="text-slate-300 text-sm py-2">
-                  Jan 2024 - Feb 2025
+                  July 2024 - Dec 2025
                 </p>
               </p>
               <p className="text-slate-300 py-2 ">
