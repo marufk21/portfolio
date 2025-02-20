@@ -2,8 +2,6 @@
 
 My personal portfolio project showcasing my development projects and skills. This website features a clean and modern design that highlights my expertise and passion for web development.
 
-Link - https: https://marufk.vercel.app
-
 ## Installation
 
 1. Clone the repository: `git clone [repository URL]`
