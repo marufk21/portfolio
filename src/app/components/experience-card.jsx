@@ -43,8 +43,6 @@ const ExperienceCard = ({
         </li>
       ))}
     </ul>
-
-
   </motion.article>
 );
 

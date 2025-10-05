@@ -2,7 +2,6 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 import { FaGithub } from "react-icons/fa";
 
-
 const ProjectCard = ({ project, index }) => (
   <motion.article
     initial={{ opacity: 0, y: 20 }}

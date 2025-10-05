@@ -58,56 +58,67 @@ const experiences = [
   },
 ];
 
-// Skills data
+// Skills data - Enhanced organization
 const skillsData = [
   {
-    category: "Languages",
-    skills: ["JavaScript (ES6+)", "TypeScript", "HTML/CSS", "SASS", "Python"],
-  },
-  {
-    category: "Libraries/Frameworks",
+    category: "Frontend",
     skills: [
       "React.js",
       "Next.js",
-      "React Native",
-      "Node.js",
+      "TypeScript",
+      "JavaScript (ES6+)",
+      "HTML/CSS",
       "Tailwind CSS",
-      "TanStack Router",
-      "Axios",
-      "React Query",
-      "Zustand",
-      "Redux Toolkit",
-      "React Hook Form",
-      "Zod",
-      "React Testing Library",
-      "Jest",
+      "SASS",
+      "React Native",
     ],
   },
   {
-    category: "Tools",
+    category: "Backend & Tools",
     skills: [
-      "Git",
-      "npm",
-      "Webpack",
-      "Chrome DevTools",
-      "Postman",
-      "Visual Studio",
-      "Android Studio",
-      "Chrome Extensions",
-    ],
-  },
-  {
-    category: "Platforms/Services",
-    skills: [
-      "Figma",
-      "Firebase",
+      "Node.js",
+      "Python",
       "RESTful APIs",
       "GraphQL",
       "tRPC",
+      "Appwrite",
+      "Strapi CMS",
+    ],
+  },
+  {
+    category: "State & Data",
+    skills: [
+      "Redux Toolkit",
+      "Zustand",
+      "React Query",
+      "TanStack Router",
+      "Axios",
+      "Zod",
+      "React Hook Form",
+    ],
+  },
+  {
+    category: "DevOps & Testing",
+    skills: [
+      "Git",
       "CI/CD",
       "Docker",
+      "Jest",
+      "React Testing Library",
+      "Webpack",
+      "npm",
+    ],
+  },
+  {
+    category: "Platforms & Design",
+    skills: [
+      "Figma",
+      "Firebase",
       "Linux",
       "Hosting",
+      "Chrome DevTools",
+      "Postman",
+      "Visual Studio",
     ],
   },
 ];
@@ -176,7 +187,7 @@ export default function Home() {
             {/* Resume Download */}
             <div className="mt-8 ">
               <a
-                href="https://drive.google.com/drive/folders/1SYKXDHFdwqV2zSI1_TcN5j3dZzdgPNA-"
+                href="https://drive.google.com/drive/folders/1Q9l_nYmgEmbMQPY6OAiZpb9ebory6Ftp"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center px-4 py-2 bg-accent text-accent-foreground font-medium text-sm transition-all duration-300 hover:bg-accent/90 hover:shadow-lg hover:shadow-accent/20 rounded-3xl"
@@ -240,7 +251,7 @@ export default function Home() {
                     href={social.url}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="block text-muted-foreground hover:text-accent transition-colors duration-300"
+                    className="block text-muted-foreground hover:text-accent transition-colors duration-300 p-2 rounded-full hover:bg-secondary"
                     aria-label={`Visit ${social.name} profile`}
                   >
                     <span className="sr-only">{social.name}</span>
@@ -280,7 +291,7 @@ export default function Home() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.1 }}
               viewport={{ once: true }}
-              className="space-y-6"
+              className="space-y-6 mt-4"
             >
               <p className="text-muted-foreground text-lg leading-relaxed">
                 I'm a Frontend-focused Full Stack Engineer with 1+ years of
@@ -291,7 +302,7 @@ export default function Home() {
               </p>
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-8">
-                <div className="bg-card border border-border rounded-xl p-6 transition-all duration-300 hover:border-accent hover:shadow-lg hover:shadow-accent/10">
+                <div className="bg-card rounded-xl p-6 transition-all duration-300 card-border">
                   <h3 className="text-xl font-bold text-foreground mb-3 font-['Inter']">
                     My Approach
                   </h3>
@@ -304,7 +315,7 @@ export default function Home() {
                   </p>
                 </div>
 
-                <div className="bg-card border border-border rounded-xl p-6 transition-all duration-300 hover:border-accent hover:shadow-lg hover:shadow-accent/10">
+                <div className="bg-card rounded-xl p-6 transition-all duration-300 card-border">
                   <h3 className="text-xl font-bold text-foreground mb-3 font-['Inter']">
                     Continuous Learning
                   </h3>
@@ -317,7 +328,7 @@ export default function Home() {
                 </div>
               </div>
 
-              <div className="bg-secondary rounded-xl p-6 mt-6">
+              <div className="bg-secondary rounded-xl p-6 mt-6 card-border">
                 <h3 className="text-xl font-bold text-foreground mb-3 font-['Inter']">
                   Let's Connect!
                 </h3>
@@ -381,7 +392,7 @@ export default function Home() {
               </h2>
             </motion.div>
 
-            <div className="space-y-8">
+            <div className="space-y-8 mt-4">
               {experiences.map((experience, index) => (
                 <ExperienceCard key={index} {...experience} index={index} />
               ))}
@@ -409,7 +420,7 @@ export default function Home() {
               </h2>
             </motion.div>
 
-            <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
+            <div className="grid grid-cols-1 gap-6 md:grid-cols-2 mt-4">
               {projectsData.map((project, index) => (
                 <ProjectCard key={project.id} project={project} index={index} />
               ))}
@@ -468,21 +479,40 @@ export default function Home() {
               </h2>
             </motion.div>
 
-            <div className="space-y-6">
+            <div className="space-y-8 mt-4">
               {skillsData.map((skillCategory, index) => (
                 <motion.div
                   key={skillCategory.category}
-                  initial={{ opacity: 0, x: -20 }}
-                  whileInView={{ opacity: 1, x: 0 }}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
                   viewport={{ once: true }}
+                  whileHover={{ y: -5 }}
+                  className="bg-card rounded-xl border border-border p-6 transition-all duration-300 hover:border-accent hover:shadow-lg hover:shadow-accent/10"
                 >
-                  <h3 className="text-lg font-bold text-foreground mb-3">
-                    {skillCategory.category}
-                  </h3>
-                  <ul className="flex flex-wrap gap-2" role="list">
+                  <motion.h3
+                    className="text-xl font-bold text-foreground mb-4 flex items-center"
+                    initial={{ opacity: 0, x: -10 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    transition={{ duration: 0.3, delay: index * 0.1 + 0.2 }}
+                    viewport={{ once: true }}
+                  >
+                    <motion.span
+                      className="w-3 h-3 bg-accent rounded-full mr-3 flex-shrink-0"
+                      whileHover={{ scale: 1.2 }}
+                      transition={{ type: "spring", stiffness: 300 }}
+                    ></motion.span>
+                    <span className="font-['Inter']">
+                      {skillCategory.category}
+                    </span>
+                  </motion.h3>
+                  <ul className="flex flex-wrap gap-3" role="list">
                     {skillCategory.skills.map((skill, idx) => (
-                      <SkillBadge key={skill} skill={skill} index={idx} />
+                      <SkillBadge
+                        key={`${skillCategory.category}-${skill}`}
+                        skill={skill}
+                        index={idx}
+                      />
                     ))}
                   </ul>
                 </motion.div>
