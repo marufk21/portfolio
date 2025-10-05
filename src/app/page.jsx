@@ -128,7 +128,7 @@ export default function Home() {
             transition={{ duration: 0.5 }}
             className="personal_heading"
           >
-            <h1 className="text-3xl sm:text-4xl font-bold tracking-tight text-foreground">
+            <h1 className="text-3xl sm:text-4xl font-bold tracking-tight text-foreground font-['Inter']">
               Maruf Khan
             </h1>
 
@@ -174,12 +174,12 @@ export default function Home() {
             </nav>
 
             {/* Resume Download */}
-            <div className="mt-8">
+            <div className="mt-8 ">
               <a
                 href="https://drive.google.com/drive/folders/1SYKXDHFdwqV2zSI1_TcN5j3dZzdgPNA-"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center px-4 py-2 bg-accent text-accent-foreground rounded-lg font-medium text-sm transition-all duration-300 hover:bg-accent/90 hover:shadow-lg hover:shadow-accent/20"
+                className="inline-flex items-center px-4 py-2 bg-accent text-accent-foreground font-medium text-sm transition-all duration-300 hover:bg-accent/90 hover:shadow-lg hover:shadow-accent/20 rounded-3xl"
                 aria-label="Download resume"
               >
                 View Resume
@@ -269,7 +269,7 @@ export default function Home() {
             >
               <h2
                 id="about-heading"
-                className="text-2xl font-bold text-foreground"
+                className="text-2xl font-bold text-foreground font-['Inter']"
               >
                 About
               </h2>
@@ -280,40 +280,83 @@ export default function Home() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.1 }}
               viewport={{ once: true }}
-              className="space-y-4"
+              className="space-y-6"
             >
-              <p className="text-muted-foreground">
+              <p className="text-muted-foreground text-lg leading-relaxed">
                 I'm a Frontend-focused Full Stack Engineer with 1+ years of
                 experience building scalable SaaS and E-commerce applications
                 using React.js, Next.js, and TypeScript. Experienced in
                 delivering SEO-optimized, high-performance enterprise dashboards
                 and web applications.
               </p>
-              <p className="text-muted-foreground">
-                My expertise lies in creating optimized, user-centric
-                applications using React.js, Next.js, and MERN. A performance
-                enthusiast at heart, I am committed to enhancing user
-                experiences by continuously improving application efficiency.
-                Alongside my frontend skills, I have a solid understanding of
-                backend technologies and DevOps tools, and I am well-versed in
-                Problem Solving.
-              </p>
-              <p className="text-muted-foreground">
-                I am constantly exploring new technologies like React Native and
-                backend frameworks to broaden my knowledge. As a dedicated
-                learner and passionate developer, I enjoy sharing my insights
-                through my side projects.
-              </p>
-              <p className="text-muted-foreground">
-                <span className="font-medium text-foreground">Connect:</span>{" "}
-                +91 8171244560 |{" "}
-                <a
-                  href="mailto:marufkhan2002@gmail.com"
-                  className="text-accent hover:underline"
-                >
-                  marufkhan2002@gmail.com
-                </a>
-              </p>
+
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-8">
+                <div className="bg-card border border-border rounded-xl p-6 transition-all duration-300 hover:border-accent hover:shadow-lg hover:shadow-accent/10">
+                  <h3 className="text-xl font-bold text-foreground mb-3 font-['Inter']">
+                    My Approach
+                  </h3>
+                  <p className="text-muted-foreground">
+                    My expertise lies in creating optimized, user-centric
+                    applications using React.js, Next.js, and MERN. A
+                    performance enthusiast at heart, I am committed to enhancing
+                    user experiences by continuously improving application
+                    efficiency.
+                  </p>
+                </div>
+
+                <div className="bg-card border border-border rounded-xl p-6 transition-all duration-300 hover:border-accent hover:shadow-lg hover:shadow-accent/10">
+                  <h3 className="text-xl font-bold text-foreground mb-3 font-['Inter']">
+                    Continuous Learning
+                  </h3>
+                  <p className="text-muted-foreground">
+                    I am constantly exploring new technologies like React Native
+                    and backend frameworks to broaden my knowledge. As a
+                    dedicated learner and passionate developer, I enjoy sharing
+                    my insights through my side projects.
+                  </p>
+                </div>
+              </div>
+
+              <div className="bg-secondary rounded-xl p-6 mt-6">
+                <h3 className="text-xl font-bold text-foreground mb-3 font-['Inter']">
+                  Let's Connect!
+                </h3>
+                <p className="text-muted-foreground mb-4">
+                  I'm always open to discussing new opportunities, creative
+                  projects, or potential collaborations.
+                </p>
+                <div className="flex flex-wrap items-center gap-4">
+                  <a
+                    href="mailto:marufkhan2002@gmail.com"
+                    className="inline-flex items-center px-4 py-2 bg-accent text-accent-foreground font-medium text-sm transition-all duration-300 hover:bg-accent/90 hover:shadow-lg hover:shadow-accent/20 rounded-3xl"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      className="h-4 w-4 mr-2"
+                      viewBox="0 0 20 20"
+                      fill="currentColor"
+                    >
+                      <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z" />
+                      <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z" />
+                    </svg>
+                    Email Me
+                  </a>
+                  <a
+                    href="tel:+918171244560"
+                    className="inline-flex items-center px-4 py-2 bg-card border border-border text-foreground font-medium text-sm transition-all duration-300 hover:border-accent hover:shadow-lg hover:shadow-accent/20 rounded-lg"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      className="h-4 w-4 mr-2"
+                      viewBox="0 0 20 20"
+                      fill="currentColor"
+                    >
+                      <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
+                    </svg>
+                    Call: +91 8171244560
+                  </a>
+                </div>
+              </div>
             </motion.div>
           </section>
 
@@ -332,7 +375,7 @@ export default function Home() {
             >
               <h2
                 id="experience-heading"
-                className="text-2xl font-bold text-foreground"
+                className="text-2xl font-bold text-foreground font-['Inter']"
               >
                 Experience
               </h2>
@@ -360,7 +403,7 @@ export default function Home() {
             >
               <h2
                 id="projects-heading"
-                className="text-2xl font-bold text-foreground"
+                className="text-2xl font-bold text-foreground font-['Inter']"
               >
                 Projects
               </h2>
@@ -383,7 +426,7 @@ export default function Home() {
                 href="https://github.com/marufk21?tab=repositories"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center px-6 py-3 bg-accent text-accent-foreground rounded-lg font-medium text-sm transition-all duration-300 hover:bg-accent/90 hover:shadow-lg hover:shadow-accent/20"
+                className="inline-flex items-center px-6 py-3 bg-accent text-accent-foreground font-medium text-sm transition-all duration-300 hover:bg-accent/90 hover:shadow-lg hover:shadow-accent/20 rounded-3xl"
                 aria-label="View more projects on GitHub"
               >
                 View More Projects
@@ -419,7 +462,7 @@ export default function Home() {
             >
               <h2
                 id="skills-heading"
-                className="text-2xl font-bold text-foreground"
+                className="text-2xl font-bold text-foreground font-['Inter']"
               >
                 Technical Skills
               </h2>

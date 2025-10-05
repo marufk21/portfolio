@@ -2,22 +2,6 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 import { FaGithub } from "react-icons/fa";
 
-// Skill Tag Component
-const SkillTag = ({ skill, index }) => (
-  <motion.li
-    initial={{ opacity: 0, scale: 0.8 }}
-    animate={{ opacity: 1, scale: 1 }}
-    transition={{ duration: 0.3, delay: index * 0.05 }}
-    className="mt-2 mr-1.5"
-  >
-    <div
-      className="text-accent rounded-full leading-5 flex items-center bg-accent/10 px-3 py-1 font-medium text-xs transition-all duration-300 hover:bg-accent hover:text-accent-foreground"
-      role="listitem"
-    >
-      {skill}
-    </div>
-  </motion.li>
-);
 
 const ProjectCard = ({ project, index }) => (
   <motion.article
@@ -32,7 +16,7 @@ const ProjectCard = ({ project, index }) => (
     <div className="flex justify-between items-start">
       <h3
         id={`project-title-${project.id}`}
-        className="text-foreground font-bold py-1"
+        className="text-foreground font-bold py-1 font-['Inter']"
       >
         <a
           href={project.link}
@@ -78,19 +62,13 @@ const ProjectCard = ({ project, index }) => (
       ))}
     </ul>
 
-    <ul className="flex skills flex-wrap mt-3 mb-4" role="list">
-      {project.skills.map((skill, idx) => (
-        <SkillTag key={idx} skill={skill} index={idx} />
-      ))}
-    </ul>
-
     <div className="rounded-lg overflow-hidden border border-border">
       <Image
         src={project.image}
         alt={`${project.title} project screenshot`}
         width={600}
         height={300}
-        className="w-full h-auto object-cover transition-transform duration-500 hover:scale-105"
+        className="w-full h-[260px] object-fill transition-transform duration-500 hover:scale-105"
         loading="lazy"
       />
     </div>

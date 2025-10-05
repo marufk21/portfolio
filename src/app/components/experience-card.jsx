@@ -18,7 +18,7 @@ const ExperienceCard = ({
   >
     <div className="flex flex-col md:flex-row md:justify-between md:items-start mb-3">
       <div>
-        <h3 className="text-lg font-bold text-foreground">
+        <h3 className="text-lg font-bold text-foreground font-['Inter']">
           {role},{" "}
           <a
             href={link}
@@ -44,17 +44,7 @@ const ExperienceCard = ({
       ))}
     </ul>
 
-    <ul className="flex flex-wrap gap-2" role="list">
-      {skills.map((skill, idx) => (
-        <li
-          key={idx}
-          className="text-accent text-xs bg-accent/10 px-2 py-1 rounded-full transition-all duration-300 hover:bg-accent hover:text-accent-foreground"
-          role="listitem"
-        >
-          {skill}
-        </li>
-      ))}
-    </ul>
+
   </motion.article>
 );
 
