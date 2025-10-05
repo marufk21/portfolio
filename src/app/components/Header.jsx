@@ -1,6 +1,6 @@
 "use client";
 
-import DarkModeToggle from "./DarkModeToggle";
+import DarkModeToggle from "./dark-mode-toggle";
 
 const Header = () => {
   return (
