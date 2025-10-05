@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
+import Header from "./components/Header";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -14,8 +15,9 @@ const geistMono = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "Maruf Khan",
-  description: "desc...",
+  title: "Maruf Khan | Full Stack Developer",
+  description:
+    "Frontend-focused Full Stack Engineer with 1+ years of experience building scalable SaaS and E-commerce applications",
 };
 
 export default function RootLayout({
@@ -24,10 +26,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" className="scroll-smooth">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
->
+        className={`${geistSans.variable} ${geistMono.variable} antialiased min-h-screen bg-background text-foreground transition-colors duration-300`}
+      >
+        <Header />
         {children}
       </body>
     </html>
