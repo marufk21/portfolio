@@ -1,3 +1,1 @@
-migrate
-latest dep
-new footer 
+New Footer 
