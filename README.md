@@ -1,30 +1,34 @@
 # Portfolio
 
-My personal portfolio project showcasing my development projects and skills. This website features a clean and modern design that highlights my expertise and passion for web development.
+A modern, high-performance portfolio website built with Next.js 16, TypeScript, Tailwind CSS, and Framer Motion.
 
-## Installation
+## 🛠️ Tech Stack
 
-1. Clone the repository: `git clone [repository URL]`
-2. Navigate to the project directory: `cd [project name]`
-3. Install dependencies: `npm install`
-4. Start the development server: `npm start`
+- **Framework**: Next.js 16
+- **Language**: TypeScript
+- **Styling**: Tailwind CSS 4
+- **Animations**: Framer Motion
 
+## 🚀 Getting Started
 
-## Technologies Used
+```bash
+# Install dependencies
+pnpm install
 
-- Next.js
-- Tailwind CSS
+# Run development server
+pnpm dev
 
-## Features
+# Build for production
+pnpm build
+```
 
--  Modern UI (User Interface)
--  Responsive
+## 👤 Author
 
-## Upcoming Features
+**Maruf Khan**
 
--  UX (User Experience)
--  Animation
+- GitHub: [@marufk21](https://github.com/marufk21)
+- LinkedIn: [marufk21](https://www.linkedin.com/in/marufk21/)
 
-## Contributing
+---
 
-Contributions are welcome! If you'd like to contribute, please [create a new issue](https://github.com/[username]/[projectname]/issues) or submit a pull request.
+Built with ❤️ using Next.js 16.

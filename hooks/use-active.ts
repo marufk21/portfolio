@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 
-const useActiveSection = () => {
+export const useActiveSection = () => {
   const [activeSection, setActiveSection] = useState("about");
 
   useEffect(() => {
@@ -31,5 +31,3 @@ const useActiveSection = () => {
 
   return activeSection;
 };
-
-export default useActiveSection;

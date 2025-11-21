@@ -25,7 +25,7 @@ const DarkModeToggle = () => {
   return (
     <button
       onClick={toggleDarkMode}
-      className="p-2 rounded-lg bg-secondary text-foreground hover:bg-accent hover:text-accent-foreground transition-colors duration-300"
+      className="p-2 rounded-full bg-secondary text-foreground hover:bg-accent hover:text-accent-foreground transition-colors duration-300"
       aria-label={darkMode ? "Switch to light mode" : "Switch to dark mode"}
     >
       {darkMode ? (
