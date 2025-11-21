@@ -3,23 +3,33 @@
 @tailwind utilities;
 
 :root {
-  /* Light theme colors */
-  --background: #ffffff;
-  --foreground: #334155;
-  --primary: #0ea5e9;
-  --primary-foreground: #f8fafc;
-  --secondary: #f1f5f9;
-  --accent: #0ea5e9;
-  --accent-foreground: #f8fafc;
-  --muted: #e2e8f0;
-  --muted-foreground: #64748b;
-  --border: #cbd5e1;
-  --border-hover: #0ea5e9;
+  /* Light theme - Slate & Indigo */
+  --background: #f8fafc; /* slate-50 */
+  --foreground: #0f172a; /* slate-900 */
+  
+  --primary: #4f46e5; /* indigo-600 */
+  --primary-foreground: #ffffff;
+  
+  --secondary: #e2e8f0; /* slate-200 */
+  --secondary-foreground: #1e293b; /* slate-800 */
+  
+  --accent: #6366f1; /* indigo-500 */
+  --accent-foreground: #ffffff;
+  
+  --muted: #f1f5f9; /* slate-100 */
+  --muted-foreground: #64748b; /* slate-500 */
+  
   --card: #ffffff;
-  --card-foreground: #334155;
+  --card-foreground: #0f172a;
+  
   --popover: #ffffff;
-  --popover-foreground: #334155;
-  --ring: #0ea5e9;
+  --popover-foreground: #0f172a;
+  
+  --border: #e2e8f0; /* slate-200 */
+  --border-hover: #cbd5e1; /* slate-300 */
+  
+  --ring: #6366f1; /* indigo-500 */
+  --radius: 0.75rem;
 
   /* Typography */
   --font-sans: "Inter", "GeistSans", -apple-system, BlinkMacSystemFont,
@@ -28,23 +38,32 @@
 }
 
 .dark {
-  /* Dark theme colors */
-  --background: #0f172a;
-  --foreground: #e2e8f0;
-  --primary: #38bdf8;
-  --primary-foreground: #0f172a;
-  --secondary: #1e293b;
-  --accent: #38bdf8;
-  --accent-foreground: #0f172a;
-  --muted: #334155;
-  --muted-foreground: #94a3b8;
-  --border: #1e293b;
-  --border-hover: #38bdf8;
-  --card: #1e293b;
-  --card-foreground: #e2e8f0;
+  /* Dark theme - Slate & Indigo */
+  --background: #020617; /* slate-950 */
+  --foreground: #f8fafc; /* slate-50 */
+  
+  --primary: #6366f1; /* indigo-500 */
+  --primary-foreground: #ffffff;
+  
+  --secondary: #1e293b; /* slate-800 */
+  --secondary-foreground: #f8fafc; /* slate-50 */
+  
+  --accent: #818cf8; /* indigo-400 */
+  --accent-foreground: #ffffff;
+  
+  --muted: #0f172a; /* slate-900 */
+  --muted-foreground: #94a3b8; /* slate-400 */
+  
+  --card: #0f172a; /* slate-900 */
+  --card-foreground: #f8fafc; /* slate-50 */
+  
   --popover: #0f172a;
-  --popover-foreground: #e2e8f0;
-  --ring: #38bdf8;
+  --popover-foreground: #f8fafc;
+  
+  --border: #1e293b; /* slate-800 */
+  --border-hover: #334155; /* slate-700 */
+  
+  --ring: #818cf8; /* indigo-400 */
 }
 
 * {
@@ -63,6 +82,7 @@ body {
   font-family: var(--font-sans);
   line-height: 1.6;
   transition: background-color 0.3s ease, color 0.3s ease;
+  overflow-x: hidden; /* Prevent horizontal scroll from background effects */
 }
 
 /* Custom scrollbar */
@@ -71,11 +91,12 @@ body {
 }
 
 ::-webkit-scrollbar-track {
-  background: var(--secondary);
+  background: transparent;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: var(--muted);
+  background: var(--muted-foreground);
+  opacity: 0.5;
   border-radius: 4px;
 }
 
@@ -87,6 +108,19 @@ body {
 :focus-visible {
   outline: 2px solid var(--ring);
   outline-offset: 2px;
+}
+
+/* Glassmorphism Utilities */
+.glass {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.dark .glass {
+  background: rgba(15, 23, 42, 0.7);
+  border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 /* Enhanced border styles */
@@ -124,11 +158,40 @@ body {
 }
 
 .card-border:hover {
-  border-color: var(--border-hover);
-  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
-    0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  border-color: transparent;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.1);
 }
 
 .card-border:hover::after {
-  opacity: 0.1;
+  opacity: 1;
+}
+
+/* Background Mesh Gradient Animation */
+.bg-mesh {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.bg-mesh::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle at 50% 50%, rgba(99, 102, 241, 0.08) 0%, transparent 50%),
+              radial-gradient(circle at 80% 20%, rgba(79, 70, 229, 0.08) 0%, transparent 40%);
+  animation: mesh-spin 20s linear infinite;
+}
+
+@keyframes mesh-spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
 }

@@ -1,8 +1,6 @@
-import snapstack from "../assets/snapstack.jpg";
+import snapstack from "../assets/snapstack.png";
 import vibesta from "../assets/vibesta.jpg";
 import streamtalk from "../assets/streamtalk.jpg";
-import electrikart from "../assets/electrikart.png";
-import infinichat from "../assets/infinichat.jpg";
 import f1extension from "../assets/f1extension.png";
 
 // Project data
@@ -15,7 +13,7 @@ const projects = [
     description: [
       "Spearheaded development of an AI-powered note-taking app delivering real-time AI suggestions boosting user productivity by 35% and improving content quality metrics by 40%.",
       "Engineered a robust, scalable SaaS architecture with Stripe integration, implementing multi-tiered pricing (Free/Pro/Enterprise) and secure webhook processing, resulting in 50% increase in subscription conversions.",
-      "Developed a production-grade app with Prisma ORM (data modeling), Cloudinary (media storage), and PostHog (analytics), delivering a responsive UI with dark mode for enhanced usability.",
+      "Developed a production-grade app with Clerk (Authentication), Prisma ORM (data modeling), Cloudinary (media storage), and PostHog (analytics), delivering a responsive UI with dark mode for enhanced usability.",
     ],
     skills: ["React", "shadcn", "Clerk", "PostgreSQL", "OpenAI", "Stripe"],
     image: snapstack,
@@ -26,10 +24,8 @@ const projects = [
     link: "https://stream-talk.vercel.app/",
     github: "https://github.com/marufk21/StreamTalk",
     description: [
-      "Engineered a real-time video conferencing platform with HD video, live chat, and screen-sharing features, supporting 10+ concurrent users with latency under 200ms.",
-      "Upgraded the full infrastructure from Next.js 7 → 15, enhancing load performance by 35% and reducing build times for faster deployments.",
-      "Integrated WebRTC and PeerJS to enable peer-to-peer connections, improving call stability and video quality across sessions.",
-      "Optimized Socket.IO auto-reconnect logic, cutting reconnection delays by 20s and improving average session uptime by 25%.",
+      "Built and deployed a real-time video conferencing platform with HD video streaming, live chat, and support for 10+ concurrent users under 200ms latency, leveraging low-latency communication and seamless cross-platform performance.",
+      "Upgraded application infra from Next.js 13 → 15 for significantly enhanced performance and maintainability; Optimized real-time reliability by integrating WebRTC with adaptive reconnection and peer recovery mechanisms, reducing connection downtime by 20s and greatly improving user experience.",
     ],
     skills: ["Next.js", "Aceternity UI", "PeerJS", "WebRTC", "Socket.IO"],
     image: streamtalk,
@@ -46,32 +42,6 @@ const projects = [
     ],
     skills: ["MERN Stack", "axios", "shadcn UI", "Sockets", "bcrypt", "JWT"],
     image: vibesta,
-  },
-  {
-    id: 4,
-    title: "ElectriKart",
-    link: "https://electrikart.netlify.app",
-    github: "https://github.com/marufk21/ElectriKart",
-    description: [
-      "Built an e-commerce platform with advanced product filtering, dynamic search, and responsive product listing UI.",
-      "Designed detailed product pages with reviews, availability, and pricing features for better purchase decisions.",
-      "Integrated cart management with real-time subtotal and shipping updates, enhancing checkout experience.",
-    ],
-    skills: ["ReactJS", "Hooks", "Context API", "React Router"],
-    image: electrikart,
-  },
-  {
-    id: 5,
-    title: "InfinityChat",
-    link: "https://main--infinichat.netlify.app/",
-    github: "https://github.com/marufk21/InfiniChat",
-    description: [
-      "Developed an AI chatbot app with real-time messaging, leveraging Gemini API for intelligent conversational experiences.",
-      "Crafted a modern and responsive chat UI with Tailwind CSS for seamless mobile and desktop usability.",
-      "Implemented dynamic chat sessions improving user engagement and message response accuracy.",
-    ],
-    skills: ["ReactJS", "Tailwind CSS", "Gemini API", "Chatbot"],
-    image: infinichat,
   },
   {
     id: 6,
