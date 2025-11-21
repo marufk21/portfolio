@@ -1,6 +1,6 @@
 "use client";
 
-import { useActiveSection } from "../hooks/use-active";
+import { useActiveSection } from "@/hooks/use-active";
 import IntroSidebar from "@/components/sidebar";
 import AboutSection from "@/components/about";
 import ExperienceSection from "@/components/experiences";
@@ -18,7 +18,7 @@ export default function Home() {
         {/* Left Sidebar - Introduction, Navigation, Social Links */}
         <IntroSidebar activeSection={activeSection} />
         {/* Main Content */}
-        <main className="pt-16 lg:w-2/3 lg:py-16 xl:py-24">
+        <main className="pt-16 lg:w-2/3 lg:py-12 xl:py-24">
           <AboutSection />
           <ExperienceSection />
           <ProjectsSection />

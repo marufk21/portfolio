@@ -85,7 +85,7 @@ const ExperienceCard = ({
     role="article"
   >
     <div className="absolute left-[-5px] top-0 h-2.5 w-2.5 rounded-full bg-accent ring-4 ring-background" />
-    
+
     <div className="flex flex-col sm:flex-row sm:justify-between sm:items-baseline mb-4">
       <h3 className="text-xl font-bold text-foreground font-['Inter']">
         {role}
@@ -115,7 +115,7 @@ const ExperienceCard = ({
 
     <div className="flex flex-wrap gap-2">
       {skills.map((skill, idx) => (
-        <span 
+        <span
           key={idx}
           className="text-xs font-medium px-2.5 py-1 rounded-md bg-accent/10 text-accent border border-accent/20"
         >
@@ -130,7 +130,7 @@ export default function ExperienceSection() {
   return (
     <section
       id="experience"
-      className="mb-16 scroll-mt-16 md:mb-24 lg:mb-36 lg:scroll-mt-24"
+      className="mb-8 scroll-mt-16 md:mb-12 lg:mb-16 lg:scroll-mt-24"
       aria-labelledby="experience-heading"
     >
       <motion.div
@@ -138,7 +138,7 @@ export default function ExperienceSection() {
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
         viewport={{ once: true }}
-        className="sticky top-0 z-20 -mx-4 bg-background/80 backdrop-blur-md px-4 py-3 transition-colors duration-300 sm:-mx-6 sm:px-6 lg:-mx-8 lg:px-8 lg:hidden"
+        className="sticky top-0 z-20 -mx-4 bg-background/80 backdrop-blur-md px-4 py-3 transition-colors duration-300 sm:-mx-6 sm:px-6 lg:-mx-8 lg:px-8"
       >
         <h2
           id="experience-heading"

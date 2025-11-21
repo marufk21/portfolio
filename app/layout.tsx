@@ -18,10 +18,11 @@ const jetbrainsMono = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Maruf Khan - Full Stack Engineer",
+  title: "Maruf Khan",
   description:
     "Frontend-focused Full Stack Engineer with 1+ years of experience building scalable SaaS and E-commerce applications using TypeScript, React.js, Next.js, and MERN stack.",
   keywords: [
+    "Software Engineer",
     "Full Stack Developer",
     "Frontend Engineer",
     "React Developer",

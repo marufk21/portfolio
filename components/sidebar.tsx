@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import { FaInstagram, FaLinkedinIn } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 import { LuGithub } from "react-icons/lu";
-import { scrollToSection } from "../hooks/scroll-utils";
+import { scrollToSection } from "@/hooks/scroll-utils";
 
 interface IntroSidebarProps {
   activeSection: string;
@@ -42,7 +42,7 @@ const socialLinks = [
 
 export default function IntroSidebar({ activeSection }: IntroSidebarProps) {
   return (
-    <header className="lg:sticky lg:top-0 lg:flex lg:max-h-screen lg:w-1/3 lg:flex-col lg:justify-between lg:py-16 xl:py-24">
+    <header className="lg:sticky lg:top-2 lg:flex lg:max-h-screen lg:w-1/3 lg:flex-col lg:justify-between lg:py-12 xl:py-24">
       {/* Introduction */}
       <motion.div
         initial={{ opacity: 0, y: 20 }}
@@ -50,11 +50,11 @@ export default function IntroSidebar({ activeSection }: IntroSidebarProps) {
         transition={{ duration: 0.5 }}
         className="personal_heading"
       >
-        <h1 className="text-4xl sm:text-5xl font-bold tracking-tight text-foreground font-['Inter'] mb-3">
+        <h1 className="text-4xl sm:text-4xl font-bold tracking-tight text-foreground font-['Inter'] mb-3">
           Maruf Khan
         </h1>
-        <h2 className="text-xl font-medium text-accent mb-4">
-          Full Stack Engineer
+        <h2 className="text-xl font-medium text-accent mb-3">
+          Software Engineer
         </h2>
         <p className="text-muted-foreground max-w-xs leading-relaxed">
           Building accessible, pixel-perfect, <br /> high-performance experiences.
