@@ -56,7 +56,7 @@ export default function AboutSection() {
               Continuous Learning
             </h3>
             <p className="text-muted-foreground">
-              I am actively exploring AI full-stack development, sharpening my skills with a strong focus on Gen AI technologies. As a curious learner and passionate developer, I enjoy creating side projects that showcase my growth, experiments, and insights in this rapidly evolving space.
+              I’m actively exploring GenAI development end-to-end while strengthening my expertise across modern full-stack technologies. As a curious learner and hands-on builder, I enjoy creating side projects that highlight my technical growth, experiments, and insights in this fast-evolving ecosystem.
             </p>
           </div>
         </div>

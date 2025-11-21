@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import { FaInstagram, FaLinkedinIn } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 import { LuGithub } from "react-icons/lu";
-import { scrollToSection } from "@/hooks/scroll-utils";
+import { useScrollTo } from "@/hooks/use-scroll";
 
 interface IntroSidebarProps {
   activeSection: string;
@@ -41,6 +41,8 @@ const socialLinks = [
 ];
 
 export default function IntroSidebar({ activeSection }: IntroSidebarProps) {
+  const scrollToSection = useScrollTo();
+  
   return (
     <header className="lg:sticky lg:top-2 lg:flex lg:max-h-screen lg:w-1/3 lg:flex-col lg:justify-between lg:py-12 xl:py-24">
       {/* Introduction */}
@@ -70,21 +72,19 @@ export default function IntroSidebar({ activeSection }: IntroSidebarProps) {
               <li key={item.id} role="listitem">
                 <button
                   onClick={() => scrollToSection(item.id)}
-                  className={`group flex items-center py-2 w-full text-left transition-colors duration-300 ${
-                    activeSection === item.id
-                      ? "text-accent"
-                      : "text-muted-foreground hover:text-foreground"
-                  }`}
+                  className={`group flex items-center py-2 w-full text-left transition-colors duration-300 ${activeSection === item.id
+                    ? "text-accent"
+                    : "text-muted-foreground hover:text-foreground"
+                    }`}
                   aria-current={
                     activeSection === item.id ? "location" : undefined
                   }
                 >
                   <span
-                    className={`nav-indicator mr-4 h-px transition-all duration-300 ${
-                      activeSection === item.id
-                        ? "w-12 bg-accent"
-                        : "w-8 bg-muted-foreground group-hover:w-12 group-hover:bg-foreground"
-                    }`}
+                    className={`nav-indicator mr-4 h-px transition-all duration-300 ${activeSection === item.id
+                      ? "w-12 bg-accent"
+                      : "w-8 bg-muted-foreground group-hover:w-12 group-hover:bg-foreground"
+                      }`}
                     aria-hidden="true"
                   ></span>
                   <span className="nav-text text-xs font-bold uppercase tracking-widest">

@@ -3,6 +3,8 @@ import { Inter, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/topbar";
 
+import { SmoothScrollProvider } from "@/components/ui/lenis-scroll";
+
 const inter = Inter({
   subsets: ["latin"],
   variable: "--font-inter",
@@ -45,12 +47,14 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="scroll-smooth">
+    <html lang="en">
       <body
         className={`${inter.variable} ${jetbrainsMono.variable} antialiased min-h-screen bg-background text-foreground transition-colors duration-300`}
       >
-        <Header />
-        {children}
+        <SmoothScrollProvider>
+          <Header />
+          {children}
+        </SmoothScrollProvider>
       </body>
     </html>
   );
