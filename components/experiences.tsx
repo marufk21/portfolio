@@ -14,47 +14,70 @@ interface Experience {
 
 const experiencesData: Experience[] = [
   {
-    role: "Frontend Engineer",
-    company: "Mojo Web Technology",
-    period: "Feb 2025 - Sep 2025",
+    role: "Full Stack Developer",
+    company: "Personal Work",
+    period: "Oct 2025 - Present",
     link: "#",
     responsibilities: [
-      "Architected and developed an enterprise dashboard from 250+ Figma screens into scalable, production-ready code, building user and admin side interfaces with RBAC for seamless multi-user experiences",
-      "Designed and engineered high-performance SaaS webapps and marketing landing pages, integrating Strapi CMS for blogs marketing teams to publish and manage blogs independently and improving load times by 40%.",
-      "Established maintainable monorepo architectures with reusable component libraries and standardized design systems, accelerating development velocity by 40% and reducing future maintenance overhead by 30%.",
-      "Implemented scalable full-stack solutions with real-time analytics, AI integration, and payment systems processing subscription management, resulting in 25% increased user engagement and 30% faster rendering performance.",
-      "Enhanced performance and SEO, achieving 95+ Lighthouse scores through code-splitting, lazy loading, and SSG/SSR/ISR, and launched high-speed production applications using advanced optimization techniques.",
+      "Built Snackstack, an AI-powered full-stack SaaS using Next.js, the TanStack ecosystem, and PostgreSQL with Stripe subscription billing and automated test cases using Jest and Playwright.",
+      "Developed ShopAI, a RAG-based e-commerce platform with admin dashboard, product management, and a user-facing storefront with chatbot using LangChain, OpenAI embeddings, and pgvector for semantic search.",
+      "Developed a real-time video calling app using WebRTC and Socket.IO with chat and reconnection handling, plus optimized performance and SEO across all projects via SSR, lazy loading, and metadata tuning.",
+    ],
+    skills: [
+      "Next.js",
+      "TypeScript",
+      "PostgreSQL",
+      "TanStack",
+      "LangChain",
+      "OpenAI",
+      "Stripe",
+      "WebRTC",
+    ],
+    index: 0,
+  },
+  {
+    role: "Full Stack Developer",
+    company: "Mojo Web Technology",
+    period: "Jan 2025 - Oct 2025",
+    link: "#",
+    responsibilities: [
+      "Converted 250+ Figma screens into production-ready UIs with role-based access for 8+ admin types and implemented a real-time data layer with efficient state handling, reducing redundant API calls by 40%.",
+      "Led development of SaaS dashboards and landing pages, integrating CMS for non-tech teams to manage blogs independently, and architected reusable shadcn components with MCP Server, reducing UI development time by 35%.",
+      "Achieved 90+ Lighthouse scores through performance optimizations across all metrics using SSR/SSG, managed frontend deployment on Vercel and backend on AWS, and implemented CI/CD pipelines for automated builds.",
+      "Enforced monorepo architecture and code review standards, reducing bug regression across sprints and accelerating cross-team development velocity.",
     ],
     skills: [
       "React.js",
       "Next.js",
       "TypeScript",
-      "Strapi CMS",
-      "SEO Optimization",
-      "SaaS Architecture",
+      "shadcn/ui",
+      "AWS",
+      "CI/CD",
+      "Monorepo",
+      "Figma",
     ],
-    index: 0,
+    index: 1,
   },
   {
-    role: "SDE Intern",
+    role: "Web Developer Intern",
     company: "WDMtech Pvt Ltd",
     period: "July 2024 - Dec 2024",
     link: "#",
     responsibilities: [
-      "Constructed a high-performance e-commerce platform from scratch, boosting user engagement by 25%, reducing rendering time, and increasing mobile traffic by 15% through responsive design and refined frontend architecture.",
-      "Integrated payment solutions and streamlined checkout flows, driving 25% increase in client sales, while collaborating with stakeholders to deliver on-time projects and enhance user satisfaction by 30%.",
-      "Streamlined the entire application using Backend-as-a-Service, including authentication of admin dashboard, ensuring 99.9% uptime and seamless data flow for product and content management.",
+      "Built a mobile-first e-commerce interface covering product listing, cart, and checkout with API integration, cutting average page load time by 25% via lazy loading, code splitting, and image optimization.",
+      "Engineered a responsive admin panel for products, orders, and content management, removing developer dependency in daily operations and reducing reported frontend bugs by 50% across 5+ breakpoints.",
+      "Defined API contracts with the backend team and validated integrations via Postman, speeding up delivery cycles and ensuring on-time project completion.",
     ],
     skills: [
       "JavaScript",
-      "ReactJs",
-      "NextJs",
+      "React.js",
       "Tailwind CSS",
       "HTML/CSS",
-      "Appwrite",
-      "Payment Integration",
+      "REST APIs",
+      "Postman",
+      "E-commerce",
     ],
-    index: 1,
+    index: 2,
   },
 ];
 
@@ -81,33 +104,34 @@ const ExperienceCard = ({
     initial={{ opacity: 0, x: -20 }}
     animate={{ opacity: 1, x: 0 }}
     transition={{ duration: 0.5, delay: index * 0.1 }}
-    className="relative pl-8 before:absolute before:left-0 before:top-0 before:bottom-0 before:w-[2px] before:bg-gradient-to-b before:from-accent before:to-transparent"
+    className="group relative rounded-[1.65rem] border border-border/60 bg-card/85 px-6 py-6 shadow-[0_18px_45px_-30px_rgba(15,23,42,0.3)] transition-all duration-300 hover:-translate-y-1 hover:border-accent/30 hover:shadow-2xl hover:shadow-accent/10"
     role="article"
   >
-    <div className="absolute left-[-5px] top-0 h-2.5 w-2.5 rounded-full bg-accent ring-4 ring-background" />
-
-    <div className="flex flex-col sm:flex-row sm:justify-between sm:items-baseline mb-4">
+    <div className="mb-4 flex flex-col sm:flex-row sm:items-baseline sm:justify-between">
       <h3 className="text-xl font-bold text-foreground font-['Inter']">
         {role}
-        <span className="text-accent mx-2">@</span>
+        <span className="mx-2 text-accent">@</span>
         <a
           href={link}
           target="_blank"
           rel="noopener noreferrer"
-          className="text-foreground hover:text-accent transition-colors duration-300"
+          className="text-foreground transition-colors duration-300 hover:text-accent"
         >
           {company}
         </a>
       </h3>
-      <span className="text-sm font-medium text-muted-foreground bg-secondary/50 px-3 py-1 rounded-full mt-2 sm:mt-0">
+      <span className="mt-2 rounded-full bg-secondary/50 px-3 py-1 text-sm font-medium text-muted-foreground sm:mt-0">
         {period}
       </span>
     </div>
 
-    <ul className="space-y-3 mb-6" role="list">
+    <ul className="mb-6 space-y-3" role="list">
       {responsibilities.map((item, idx) => (
-        <li key={idx} className="text-muted-foreground text-base leading-relaxed flex items-start">
-          <span className="mr-3 text-accent mt-1.5">›</span>
+        <li
+          key={idx}
+          className="flex items-start text-base leading-relaxed text-muted-foreground"
+        >
+          <span className="mr-3 mt-1.5 text-accent">&#8250;</span>
           {item}
         </li>
       ))}
@@ -117,7 +141,7 @@ const ExperienceCard = ({
       {skills.map((skill, idx) => (
         <span
           key={idx}
-          className="text-xs font-medium px-2.5 py-1 rounded-md bg-accent/10 text-accent border border-accent/20"
+          className="inline-flex items-center rounded-full bg-accent/10 px-2 py-0.5 text-[10px] font-medium text-accent"
         >
           {skill}
         </span>
@@ -138,7 +162,7 @@ export default function ExperienceSection() {
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
         viewport={{ once: true }}
-        className="sticky top-0 z-20 -mx-4 bg-background/80 backdrop-blur-md px-4 py-3 transition-colors duration-300 sm:-mx-6 sm:px-6 lg:-mx-8 lg:px-8"
+        className="section-heading sticky top-0 z-20 -mx-4 bg-background/80 px-4 py-3 backdrop-blur-md transition-colors duration-300 sm:-mx-6 sm:px-6 lg:-mx-8 lg:px-8"
       >
         <h2
           id="experience-heading"
@@ -148,7 +172,7 @@ export default function ExperienceSection() {
         </h2>
       </motion.div>
 
-      <div className="space-y-12 mt-8">
+      <div className="mt-8 space-y-8">
         {experiencesData.map((experience, index) => (
           <ExperienceCard key={index} {...experience} index={index} />
         ))}

@@ -4,14 +4,15 @@ import Image, { StaticImageData } from "next/image";
 import { motion } from "framer-motion";
 import { FaGithub } from "react-icons/fa";
 import { LuExternalLink } from "react-icons/lu";
-import snapstack from "@/assets/snapstack.png";
-import vibesta from "@/assets/vibesta.png";
+import snackstack from "@/assets/snackstack.png";
 import streamtalk from "@/assets/streamtalk.png";
+import shopai from "@/assets/shopai.png";
 import f1extension from "@/assets/f1.png";
 
 interface Project {
   id: number;
   title: string;
+  tag: string;
   link: string;
   github: string;
   description: string[];
@@ -22,7 +23,8 @@ interface Project {
 const projectsData: Project[] = [
   {
     id: 1,
-    title: "SnapStack",
+    title: "Snackstack",
+    tag: "AI SaaS",
     link: "https://snackstack-gold.vercel.app/",
     github: "https://github.com/marufk21/snackstack",
     description: [
@@ -31,36 +33,39 @@ const projectsData: Project[] = [
       "Developed a production-grade app with Clerk (Authentication), Prisma ORM (data modeling), Cloudinary (media storage), and PostHog (analytics), delivering a responsive UI with dark mode for enhanced usability.",
     ],
     skills: ["React", "shadcn", "Clerk", "PostgreSQL", "OpenAI", "Stripe"],
-    image: snapstack,
+    image: snackstack,
   },
   {
     id: 2,
+    title: "ShopAI",
+    tag: "E-commerce",
+    link: "https://shop-ai-client-azure.vercel.app",
+    github: "https://github.com/marufk21/Shop-AI",
+    description: [
+      "Developed a RAG-based e-commerce platform with a full admin dashboard for product and order management, plus a user-facing storefront and AI chatbot powered by LangChain and OpenAI embeddings.",
+      "Implemented semantic product search using pgvector for vector similarity, enabling natural language queries and intelligent product discovery that significantly improves the shopping experience.",
+      "Built the entire full-stack application with Next.js, PostgreSQL, and Prisma, delivering a responsive, production-grade platform with optimized performance.",
+    ],
+    skills: ["Next.js", "LangChain", "OpenAI", "pgvector", "PostgreSQL", "Prisma"],
+    image: shopai,
+  },
+  {
+    id: 3,
     title: "StreamTalk",
+    tag: "Video Chat",
     link: "https://stream-talk.vercel.app/",
     github: "https://github.com/marufk21/StreamTalk",
     description: [
       "Built and deployed a real-time video conferencing platform with HD video streaming, live chat, and support for 10+ concurrent users under 200ms latency, leveraging low-latency communication and seamless cross-platform performance.",
-      "Upgraded application infra from Next.js 13 → 15 for significantly enhanced performance and maintainability; Optimized real-time reliability by integrating WebRTC with adaptive reconnection and peer recovery mechanisms, reducing connection downtime by 20s and greatly improving user experience.",
+      "Upgraded application infra from Next.js 13 to 15 for significantly enhanced performance and maintainability; Optimized real-time reliability by integrating WebRTC with adaptive reconnection and peer recovery mechanisms, reducing connection downtime by 20s and greatly improving user experience.",
     ],
     skills: ["Next.js", "Aceternity UI", "PeerJS", "WebRTC", "Socket.IO"],
     image: streamtalk,
   },
   {
-    id: 3,
-    title: "Vibesta",
-    link: "https://vibesta.onrender.com",
-    github: "https://github.com/marufk21/Vibesta",
-    description: [
-      "Developed a full-featured social media app enabling photo sharing, likes, comments, and personalized feeds for connected users.",
-      "Implemented secure authentication, profile customization, and real-time chat for seamless interaction using Socket.io.",
-      "Optimized MongoDB queries and API response times, resulting in faster content delivery and smoother user experience.",
-    ],
-    skills: ["MERN Stack", "axios", "shadcn UI", "Sockets", "bcrypt", "JWT"],
-    image: vibesta,
-  },
-  {
     id: 6,
     title: "F1-Extension",
+    tag: "Chrome Extension",
     link: "https://github.com/marufk21/F1-Racing-Extension",
     github: "https://github.com/marufk21/F1-Racing-Extension",
     description: [
@@ -68,7 +73,7 @@ const projectsData: Project[] = [
       "Integrated live APIs to fetch up-to-date race data and enhance user engagement during live events.",
       "Optimized extension performance and caching mechanisms to deliver instant data refreshes with minimal bandwidth usage, ensuring a seamless user experience during live race updates.",
     ],
-    skills: ["ReactJS", "Chrome Extensions", "JavaScript"],
+    skills: ["ReactJS", "WXT"],
     image: f1extension,
   },
 ];
@@ -77,6 +82,7 @@ interface ProjectCardProps {
   project: {
     id: number;
     title: string;
+    tag: string;
     link: string;
     github: string;
     description: string[];
@@ -92,12 +98,13 @@ const ProjectCard = ({ project, index }: ProjectCardProps) => (
     animate={{ opacity: 1, y: 0 }}
     transition={{ duration: 0.5, delay: index * 0.1 }}
     whileHover={{ y: -8 }}
-    className="group relative flex flex-col h-full bg-card rounded-2xl overflow-hidden border border-border transition-all duration-300 hover:shadow-2xl hover:shadow-accent/10 hover:border-accent/30"
+    className="group relative flex h-full flex-col overflow-hidden rounded-[1.65rem] border border-border/60 bg-card/85 shadow-[0_18px_45px_-30px_rgba(15,23,42,0.3)] transition-all duration-300 hover:border-accent/30 hover:shadow-2xl hover:shadow-accent/10"
     role="article"
     aria-labelledby={`project-title-${project.id}`}
   >
     <div className="relative h-48 w-full overflow-hidden">
-      <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent z-10 opacity-60 transition-opacity duration-300 group-hover:opacity-40" />
+      <div className="absolute inset-0 z-10 bg-gradient-to-t from-slate-950/75 via-slate-900/15 to-transparent opacity-70 transition-opacity duration-300 group-hover:opacity-45" />
+      <div className="absolute inset-x-0 bottom-0 z-10 h-24 bg-gradient-to-t from-card via-card/40 to-transparent" />
       <Image
         src={project.image}
         alt={`${project.title} project screenshot`}
@@ -108,42 +115,61 @@ const ProjectCard = ({ project, index }: ProjectCardProps) => (
       />
     </div>
 
-    <div className="flex flex-col flex-grow p-6">
-      <div className="flex justify-between items-start mb-4">
+    <div className="flex flex-grow flex-col p-6">
+      <div className="mb-4 flex items-center justify-between">
         <h3
           id={`project-title-${project.id}`}
-          className="text-xl font-bold text-foreground font-['Inter'] group-hover:text-accent transition-colors duration-300"
+          className="flex items-center gap-2 text-xl font-bold text-foreground font-['Inter'] transition-colors duration-300 group-hover:text-accent"
         >
+          {project.title}
+          <span className="inline-flex items-center rounded-full bg-accent/10 px-2 py-0.5 text-[10px] font-medium text-accent">
+            {project.tag}
+          </span>
+        </h3>
+        <div className="flex items-center gap-2">
           <a
             href={project.link}
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center gap-2"
+            className="p-1 text-muted-foreground transition-colors duration-300 hover:text-foreground"
             aria-label={`View ${project.title} project`}
           >
-            {project.title}
-            <LuExternalLink className="h-4 w-4 opacity-0 -translate-x-2 transition-all duration-300 group-hover:opacity-100 group-hover:translate-x-0" />
+            <LuExternalLink className="h-4 w-4" />
           </a>
-        </h3>
-        <a
-          href={project.github}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="text-muted-foreground hover:text-foreground transition-colors duration-300 p-1"
-          aria-label={`View ${project.title} GitHub repository`}
-        >
-          <FaGithub className="h-5 w-5" />
-        </a>
+          <a
+            href={project.github}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="p-1 text-muted-foreground transition-colors duration-300 hover:text-foreground"
+            aria-label={`View ${project.title} GitHub repository`}
+          >
+            <FaGithub className="h-4 w-4" />
+          </a>
+        </div>
       </div>
 
-      <ul className="space-y-2 mb-6 flex-grow" role="list">
+      <ul className="mb-6 flex-grow space-y-2" role="list">
         {project.description.map((desc, idx) => (
-          <li key={idx} className="text-sm text-muted-foreground flex items-start">
-            <span className="mr-2 text-accent mt-1.5 text-[10px]">●</span>
+          <li
+            key={idx}
+            className="flex items-start text-sm text-muted-foreground"
+          >
+            <span className="mr-2 mt-1.5 text-[10px] text-accent">&#9679;</span>
             {desc}
           </li>
         ))}
       </ul>
+
+      <div className="flex flex-wrap gap-1.5">
+        {project.skills.map((skill, idx) => (
+          <span
+            key={idx}
+            className="inline-flex items-center rounded-full bg-accent/10 px-2 py-0.5 text-[10px] font-medium text-accent"
+          >
+            {skill}
+          </span>
+        ))}
+      </div>
     </div>
   </motion.article>
 );
@@ -160,7 +186,7 @@ export default function ProjectsSection() {
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
         viewport={{ once: true }}
-        className="sticky top-0 z-20 -mx-4 bg-background/80 backdrop-blur-md px-4 py-3 transition-colors duration-300 sm:-mx-6 sm:px-6 lg:-mx-8 lg:px-8"
+        className="section-heading sticky top-0 z-20 -mx-4 bg-background/80 px-4 py-3 backdrop-blur-md transition-colors duration-300 sm:-mx-6 sm:px-6 lg:-mx-8 lg:px-8"
       >
         <h2
           id="projects-heading"
@@ -170,7 +196,7 @@ export default function ProjectsSection() {
         </h2>
       </motion.div>
 
-      <div className="grid grid-cols-1 gap-8 md:grid-cols-2 mt-8">
+      <div className="mt-8 grid grid-cols-1 gap-8 md:grid-cols-2">
         {projectsData.map((project, index) => (
           <ProjectCard key={project.id} project={project} index={index} />
         ))}
@@ -181,13 +207,13 @@ export default function ProjectsSection() {
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
         viewport={{ once: true }}
-        className="flex justify-center mt-12"
+        className="mt-12 flex justify-center"
       >
         <a
           href="https://github.com/marufk21?tab=repositories"
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-flex items-center px-8 py-4 bg-transparent border border-accent text-accent font-medium text-sm transition-all duration-300 hover:bg-accent hover:text-accent-foreground hover:shadow-lg hover:shadow-accent/20 rounded-full group"
+          className="group inline-flex items-center rounded-full border border-accent/70 bg-transparent px-8 py-4 text-sm font-medium text-accent transition-all duration-300 hover:-translate-y-0.5 hover:bg-accent hover:text-accent-foreground hover:shadow-lg hover:shadow-accent/20"
           aria-label="View more projects on GitHub"
         >
           View More Projects

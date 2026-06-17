@@ -42,7 +42,7 @@ const socialLinks = [
 
 export default function IntroSidebar({ activeSection }: IntroSidebarProps) {
   const scrollToSection = useScrollTo();
-  
+
   return (
     <header className="lg:sticky lg:top-2 lg:flex lg:max-h-screen lg:w-1/3 lg:flex-col lg:justify-between lg:py-12 xl:py-24">
       {/* Introduction */}
@@ -56,10 +56,11 @@ export default function IntroSidebar({ activeSection }: IntroSidebarProps) {
           Maruf Khan
         </h1>
         <h2 className="text-xl font-medium text-accent mb-3">
-          Software Engineer
+          Full Stack Developer
         </h2>
         <p className="text-muted-foreground max-w-xs leading-relaxed">
-          Building accessible, pixel-perfect, <br /> high-performance experiences.
+          Building scalable SaaS, AI-powered, <br /> and real-time web
+          applications.
         </p>
 
         {/* Navigation */}
@@ -72,19 +73,21 @@ export default function IntroSidebar({ activeSection }: IntroSidebarProps) {
               <li key={item.id} role="listitem">
                 <button
                   onClick={() => scrollToSection(item.id)}
-                  className={`group flex items-center py-2 w-full text-left transition-colors duration-300 ${activeSection === item.id
-                    ? "text-accent"
-                    : "text-muted-foreground hover:text-foreground"
-                    }`}
+                  className={`group flex items-center py-2 w-full text-left transition-colors duration-300 ${
+                    activeSection === item.id
+                      ? "text-accent"
+                      : "text-muted-foreground hover:text-foreground"
+                  }`}
                   aria-current={
                     activeSection === item.id ? "location" : undefined
                   }
                 >
                   <span
-                    className={`nav-indicator mr-4 h-px transition-all duration-300 ${activeSection === item.id
-                      ? "w-12 bg-accent"
-                      : "w-8 bg-muted-foreground group-hover:w-12 group-hover:bg-foreground"
-                      }`}
+                    className={`nav-indicator mr-4 h-px transition-all duration-300 ${
+                      activeSection === item.id
+                        ? "w-12 bg-accent"
+                        : "w-8 bg-muted-foreground group-hover:w-12 group-hover:bg-foreground"
+                    }`}
                     aria-hidden="true"
                   ></span>
                   <span className="nav-text text-xs font-bold uppercase tracking-widest">

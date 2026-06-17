@@ -1,8 +1,10 @@
-import type Lenis from "lenis";
-
 declare global {
   interface Window {
-    lenis?: Lenis;
+    lenis?: {
+      raf: (time: number) => void;
+      destroy: () => void;
+      scrollTo: (target: string | HTMLElement, options?: { offset?: number; duration?: number }) => void;
+    };
   }
 }
 

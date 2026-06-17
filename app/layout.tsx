@@ -22,21 +22,23 @@ const jetbrainsMono = JetBrains_Mono({
 export const metadata: Metadata = {
   title: "Maruf Khan",
   description:
-    "Frontend-focused Full Stack Engineer with 1+ years of experience building scalable SaaS and E-commerce applications using TypeScript, React.js, Next.js, and MERN stack.",
+    "Full Stack Developer with nearly 2 years of experience building scalable SaaS, AI-powered, and real-time web applications using TypeScript, React.js, Next.js, PostgreSQL, and modern AI tooling.",
   keywords: [
-    "Software Engineer",
     "Full Stack Developer",
+    "Software Engineer",
     "Frontend Engineer",
     "React Developer",
     "Next.js Developer",
     "TypeScript",
+    "AI Engineer",
     "Web Development",
+    "SaaS Developer",
   ],
   authors: [{ name: "Maruf Khan" }],
   openGraph: {
-    title: "Maruf Khan - Full Stack Engineer",
+    title: "Maruf Khan - Full Stack Developer",
     description:
-      "Frontend-focused Full Stack Engineer specializing in scalable SaaS and E-commerce applications",
+      "Full Stack Developer specializing in scalable SaaS, AI-powered, and real-time web applications",
     type: "website",
   },
 };

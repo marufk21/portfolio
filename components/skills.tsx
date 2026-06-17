@@ -6,9 +6,10 @@ import {
   SiJavascript,
   SiTypescript,
   SiHtml5,
-  SiCss3,
+  SiCss,
   SiSass,
   SiPython,
+  SiPhp,
   SiReact,
   SiNextdotjs,
   SiNodedotjs,
@@ -33,8 +34,13 @@ import {
   SiDocker,
   SiLinux,
   SiGithubactions,
+  SiMongodb,
+  SiPostgresql,
+  SiLaravel,
+  SiFastapi,
+  SiSlack,
 } from "react-icons/si";
-import { FaServer, FaCode, FaDatabase } from "react-icons/fa";
+import { FaServer, FaCode, FaDatabase, FaAws } from "react-icons/fa";
 import { TbApi } from "react-icons/tb";
 import { LuMousePointerClick } from "react-icons/lu";
 
@@ -50,59 +56,64 @@ interface SkillCategory {
 
 const skillsData: SkillCategory[] = [
   {
-    category: "Languages",
+    category: "Programming",
     skills: [
       { name: "JavaScript (ES6+)", icon: SiJavascript },
       { name: "TypeScript", icon: SiTypescript },
       { name: "HTML/CSS", icon: SiHtml5 },
-      { name: "SASS", icon: SiSass },
       { name: "Python", icon: SiPython },
+      { name: "PHP", icon: SiPhp },
+      { name: "SASS", icon: SiSass },
     ],
   },
   {
-    category: "Libraries/Frameworks",
+    category: "Frameworks & Libraries",
     skills: [
       { name: "React.js", icon: SiReact },
       { name: "Next.js", icon: SiNextdotjs },
       { name: "React Native", icon: SiReact },
       { name: "Node.js", icon: SiNodedotjs },
       { name: "Tailwind CSS", icon: SiTailwindcss },
-      { name: "TanStack Router", icon: FaCode }, // Generic code icon
+      { name: "Laravel", icon: SiLaravel },
+      { name: "FastAPI", icon: SiFastapi },
+      { name: "TanStack", icon: FaCode },
       { name: "Axios", icon: SiAxios },
       { name: "React Query", icon: SiReactquery },
-      { name: "Zustand", icon: FaDatabase }, // Generic state icon
+      { name: "Zustand", icon: FaDatabase },
       { name: "Redux Toolkit", icon: SiRedux },
       { name: "React Hook Form", icon: SiReacthookform },
       { name: "Zod", icon: SiZod },
-      { name: "React Testing Library", icon: SiTestinglibrary },
       { name: "Jest", icon: SiJest },
+      { name: "React Testing Library", icon: SiTestinglibrary },
     ],
   },
   {
-    category: "Tools",
+    category: "Tools & Platforms",
     skills: [
       { name: "Git", icon: SiGit },
       { name: "npm", icon: SiNpm },
       { name: "Webpack", icon: SiWebpack },
       { name: "Chrome DevTools", icon: SiGooglechrome },
       { name: "Postman", icon: SiPostman },
-      { name: "Android Studio", icon: SiAndroidstudio },
-      { name: "Chrome Extensions", icon: SiGooglechrome },
+      { name: "Figma", icon: SiFigma },
+      { name: "Slack", icon: SiSlack },
       { name: "Cursor", icon: LuMousePointerClick },
+      { name: "Claude Code", icon: FaCode },
     ],
   },
   {
-    category: "Platforms/Services",
+    category: "Backend & DevOps",
     skills: [
-      { name: "Figma", icon: SiFigma },
+      { name: "PostgreSQL", icon: SiPostgresql },
+      { name: "MongoDB", icon: SiMongodb },
       { name: "Firebase", icon: SiFirebase },
       { name: "RESTful APIs", icon: TbApi },
       { name: "GraphQL", icon: SiGraphql },
       { name: "tRPC", icon: SiTrpc },
-      { name: "CI/CD", icon: SiGithubactions },
       { name: "Docker", icon: SiDocker },
+      { name: "AWS", icon: FaAws },
+      { name: "CI/CD", icon: SiGithubactions },
       { name: "Linux", icon: SiLinux },
-      { name: "Hosting", icon: FaServer },
     ],
   },
 ];

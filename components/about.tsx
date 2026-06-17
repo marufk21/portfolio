@@ -32,11 +32,18 @@ export default function AboutSection() {
         className="space-y-6 mt-4"
       >
         <p className="text-muted-foreground text-lg leading-relaxed">
-          I'm a <span className="text-foreground font-medium">Frontend-focused Full Stack Engineer</span> with 1+ years of
-          experience building scalable SaaS and E-commerce applications
-          using <span className="text-foreground font-medium">TypeScript, React.js, Next.js, and MERN</span>. Experienced in
-          delivering SEO-optimized, high-performance enterprise dashboards
-          and web applications while thriving in fast-paced, cross-functional environments.
+          I'm a{" "}
+          <span className="text-foreground font-medium">
+            Full Stack Engineer
+          </span>{" "}
+          with nearly 2 years of experience building scalable SaaS, E-commerce,
+          and AI-powered applications using{" "}
+          <span className="text-foreground font-medium">
+            TypeScript, React.js, Next.js, PostgreSQL, and the TanStack ecosystem
+          </span>
+          . Experienced in delivering SEO-optimized, high-performance
+          dashboards and real-time web applications while thriving in fast-paced,
+          cross-functional environments.
         </p>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-8">
@@ -46,7 +53,11 @@ export default function AboutSection() {
               My Approach
             </h3>
             <p className="text-muted-foreground">
-              My expertise lies in building scalable, user-centric, and highly maintainable applications using TypeScript, React.js, Next.js, and the MERN stack. With a strong focus on performance and reliability, I strive to deliver smooth, high-quality user experiences by consistently optimizing application efficiency.
+              I build production-grade applications with TypeScript, Next.js,
+              PostgreSQL, and modern AI tooling (LangChain, OpenAI, pgvector).
+              With a strong focus on performance, SEO, and reliability, I
+              deliver smooth user experiences backed by CI/CD pipelines,
+              monorepo architecture, and automated testing.
             </p>
           </div>
 
@@ -56,7 +67,11 @@ export default function AboutSection() {
               Continuous Learning
             </h3>
             <p className="text-muted-foreground">
-              I’m actively exploring GenAI development end-to-end while strengthening my expertise across modern full-stack technologies. As a curious learner and hands-on builder, I enjoy creating side projects that highlight my technical growth, experiments, and insights in this fast-evolving ecosystem.
+              I’m actively building AI-powered full-stack products end-to-end while
+              deepening my expertise across the modern JavaScript ecosystem.
+              As a hands-on builder and curious learner, I create side projects
+              that push my technical boundaries — from RAG-based chatbots to
+              real-time communication apps — and share my learnings along the way.
             </p>
           </div>
         </div>
@@ -66,8 +81,8 @@ export default function AboutSection() {
             Let's Connect!
           </h3>
           <p className="text-muted-foreground mb-6">
-            I'm always open to discussing new opportunities, creative
-            projects, or potential collaborations.
+            I'm always open to discussing new opportunities, creative projects,
+            or potential collaborations.
           </p>
           <div className="flex flex-wrap items-center gap-4">
             <a
