@@ -6,7 +6,6 @@ import {
   SiJavascript,
   SiTypescript,
   SiHtml5,
-  SiCss,
   SiSass,
   SiPython,
   SiPhp,
